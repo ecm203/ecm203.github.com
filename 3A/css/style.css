@@ -1,0 +1,37 @@
+/*-----------------------------------Loading Page--------------------------------------------- */
+.panel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10000;
+  background: #b0bcc2;
+  width: 100%;
+  min-height: 100vh;
+}
+
+#circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+}
+
+.loader {
+  width: calc(100% - 0px);
+  height: calc(100% - 0px);
+  border: 8px solid #162534;
+  border-top: 8px solid #eb1e1e;
+  border-radius: 50%;
+  animation: rotate 5s linear infinite;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(500deg);
+  }
+}
+
