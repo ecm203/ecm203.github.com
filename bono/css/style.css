@@ -13,7 +13,7 @@
   z-index: 10000;
   background: var(--blanco);
   width: 100%;
-  min-height: 100vh;
+  max-height: 100vh;
 }
 
 #circle {
