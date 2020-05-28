@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Mukta');
+@import url("https://fonts.googleapis.com/css?family=Mukta");
 
 body {
-    font-family: 'Mukta', sans-serif;
+  font-family: "Mukta", sans-serif;
 }
 /*-----------------------------------Loading Page--------------------------------------------- */
 .panel {
@@ -40,7 +40,7 @@ body {
   }
 }
 
-.logo{
+.logo {
   position: fixed;
   bottom: 0;
   right: 0;
@@ -50,22 +50,24 @@ body {
 /*------------------Principal content ---------------- */
 
 .info-box {
-    min-height: 100vh;
-    background-color: #bf0909;
-    box-shadow: 0 0 15px 9px #00000096;
+  min-height: 100vh;
+  background-color: #bf0909;
+  box-shadow: 0 0 15px 9px #00000096;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* -----------------formulario------------ */
-
-.formulario{
+.formulario {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   min-height: 100vh;
 }
 
-.formulario .titulo{
+.formulario .titulo {
   font-size: 35px;
   font-weight: 600;
 }
@@ -79,10 +81,10 @@ body {
   padding: 15px;
   justify-content: space-between;
   align-items: center;
-  
 }
 
-.dni input[type="text"],input[type="text"] {
+.dni input[type="text"],
+input[type="text"] {
   border: none;
   margin-left: 10px;
   width: 100%;
@@ -100,18 +102,18 @@ body {
 }
 
 .user .btnInicio {
-width: 100%;
-border: none;
-margin-left: 10px;
-width: 100%;
-outline: none;
-height: 80%;
+  width: 100%;
+  border: none;
+  margin-left: 10px;
+  width: 100%;
+  outline: none;
+  height: 80%;
 }
-.label-help{
+.label-help {
   cursor: pointer;
 }
-.label-help:hover{
-    color: #bf0909;
+.label-help:hover {
+  color: #bf0909;
 }
 form button[type="submit"] {
   max-width: 150px;
@@ -126,18 +128,46 @@ form button[type="submit"] {
   float: right;
   cursor: pointer;
 }
-form button[type="submit"]:hover{
+form button[type="submit"]:hover {
   border: 2px solid #bf0909;
   background: #fff;
   color: #bf0909;
   transition-property: all;
   transition-duration: 0.2s;
   transition-timing-function: ease-in;
-} 
-
-
+}
+.img-principal {
+  margin: 10%;
+}
+.logo {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 15px;
+}
+.logo-2 {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+.logo-3 {
+  position: fixed;
+  bottom: 0;
+  right: 50%;
+  margin-right: 15px;
+}
+.help-2 {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 15px;
+  cursor: pointer;
+}
+.help-2:hover {
+  color: #bf0909;
+}
 @media (max-width: 768px) {
-  .info-box{
+  .info-box {
     display: none;
   }
 }

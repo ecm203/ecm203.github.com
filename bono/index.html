@@ -31,33 +31,48 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-6 info-box">
-                
+                <div class="img-principal">
+                    <img class="img-fluid" src="img/circle-cropped.png" alt="">
+                </div>
+                <div class="logo-2">
+                    <img class="img-fluid" src="img/elperuprimero.png" alt="">
+                </div>
+                <div class="logo-3">
+                    <img class="img-fluid" src="img/reniec.png" alt="">
+                </div>
             </div>
-            <div class="col-md-6  formulario">
-                <p class="titulo text-center">
-                    Consulta de Bono Universal
-                </p>
-                <form action="">
-                    <div class="dni">
-                        <i class="fas fa-id-card fa-2x"></i>
-                        <input maxlength="8" id="txtDni" placeholder="Ingre su dni aquí" required type="text"></input>
+            <div class="col-md-6">
+                <div class="help-2">
+                    <p class=""><i class="far fa-question-circle"></i> ¿Necesitas Ayuda?</p>
+                </div>
+                <div class="formulario">
+                    <p class="titulo text-center">
+                        Consulta de Bono Universal
+                    </p>
+                    <form action="">
+                        <div class="dni">
+                            <i class="fas fa-id-card fa-2x"></i>
+                            <input maxlength="8" id="txtDni" placeholder="Ingrese su dni aquí" required
+                                type="text"></input>
+                        </div>
+                        <div class="fecha">
+                            <i class="fas fa-calendar-week fa-2x"></i>
+                            <input id="txtContraseña" placeholder="Ingrese aquí la fecha de emisión de su dni" required
+                                type="date"></input>
+                        </div>
+                        <div class="help">
+                            <i class="far fa-question-circle"></i>
+                            <label class="label-help" for="btnhelp">¿Donde queda la fecha de emisión de mi dni?</label>
+                            <input class="d-none" type="checkbox" id="btnhelp">
+                        </div>
+                        <button type="submit">Aceptar</button>
+                    </form>
+                    <div class="logo">
+                        <img class="img-fluid" src=" img/logo.png" class="img-fluid" alt="Logo Gobierno del Perú">
                     </div>
-                    <div class="fecha">
-                        <i class="fas fa-calendar-week fa-2x"></i>
-                        <input id="txtContraseña" placeholder="Ingrese aquí la fecha de emisión de su dni" required
-                            type="date"></input>
-                    </div>
-                    <div class="help">
-                        <i class="far fa-question-circle"></i>
-                        <label class="label-help" for="btnhelp">¿Donde queda la fecha de emisión de mi dni?</label>
-                        <input class="d-none" type="checkbox" id="btnhelp">
-                    </div>
-                    <button type="submit">Aceptar</button>
-                </form>
+                </div>
             </div>
-            <div class="logo">
-                <img src="img/logo.png" class="img-fluid" alt="Logo Gobierno del Perú">
-            </div>
+
         </div>
     </div>
 
