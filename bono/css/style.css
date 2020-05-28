@@ -1,8 +1,8 @@
-:root{
-  --rojo: #D91023;
-  --blanco: #ffffff;
-}
+@import url('https://fonts.googleapis.com/css?family=Mukta');
 
+body {
+    font-family: 'Mukta', sans-serif;
+}
 /*-----------------------------------Loading Page--------------------------------------------- */
 .panel {
   position: fixed;
@@ -10,8 +10,8 @@
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 10000;
-  background: var(--blanco);
+  z-index: 1;
+  background: #ffffff;
   width: 100%;
   max-height: 100vh;
 }
@@ -28,8 +28,8 @@
 .loader {
   width: calc(100% - 0px);
   height: calc(100% - 0px);
-  border: 8px solid var(--rojo);
-  border-top: 8px solid var(--blanco);
+  border: 8px solid #bf0909;
+  border-top: 8px solid #ffffff;
   border-radius: 50%;
   animation: rotate 5s linear infinite;
 }
@@ -41,9 +41,103 @@
 }
 
 .logo{
-  position: absolute;
+  position: fixed;
   bottom: 0;
   right: 0;
   margin: 10px;
 }
 
+/*------------------Principal content ---------------- */
+
+.info-box {
+    min-height: 100vh;
+    background-color: #bf0909;
+    box-shadow: 0 0 15px 9px #00000096;
+}
+
+/* -----------------formulario------------ */
+
+.formulario{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.formulario .titulo{
+  font-size: 35px;
+  font-weight: 600;
+}
+.dni,
+.fecha {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #b5b5b5;
+  border-radius: 10px;
+  margin: 20px 0;
+  padding: 15px;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.dni input[type="text"],input[type="text"] {
+  border: none;
+  margin-left: 10px;
+  width: 100%;
+  outline: none;
+  height: 80%;
+}
+
+.fecha input {
+  width: 100%;
+  border: none;
+  margin-left: 10px;
+  width: 100%;
+  outline: none;
+  height: 80%;
+}
+
+.user .btnInicio {
+width: 100%;
+border: none;
+margin-left: 10px;
+width: 100%;
+outline: none;
+height: 80%;
+}
+.label-help{
+  cursor: pointer;
+}
+.label-help:hover{
+    color: #bf0909;
+}
+form button[type="submit"] {
+  max-width: 150px;
+  width: 100%;
+  background: #bf0909;
+  color: #f9f9f9;
+  border: none;
+  margin: 15px;
+  padding: 10px;
+  text-transform: uppercase;
+  border-radius: 2px;
+  float: right;
+  cursor: pointer;
+}
+form button[type="submit"]:hover{
+  border: 2px solid #bf0909;
+  background: #fff;
+  color: #bf0909;
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in;
+} 
+
+
+@media (max-width: 768px) {
+  .info-box{
+    display: none;
+  }
+}
