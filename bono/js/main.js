@@ -18,17 +18,27 @@ $(document).ready(function () {
   $(".help-2").on("click", function () {
     Swal.fire({
       title: "Intrucciones",
-      icon:"question",
+      icon: "question",
       html:
-        "<ul>"+
-        "<li>Para realizar la consulta te recomendamos tener tu dni fisico a la mano</li>"+
-        "<li>A continuación ingrese el numero de su dni</li>"+
-        "<li>Ingrese la fecha de emisión de su dni</li>"+
-        "<li>Haga clic en aceptar</li>"+
+        "<ul>" +
+        "<li>Para realizar la consulta te recomendamos tener tu dni fisico a la mano</li>" +
+        "<li>A continuación ingrese el numero de su dni</li>" +
+        "<li>Ingrese la fecha de emisión de su dni</li>" +
+        "<li>Haga clic en aceptar</li>" +
         "</ul>",
       confirmButtonColor: "#bf0909",
       confirmButtonText: "Aceptar",
     });
   });
-  $("#txtDni").on("change", function () {});
+
+  $("#btnAceptar").on("click", function () {
+    $(".info-result").removeClass("d-none");
+    $(".formulario").addClass("d-none");
+  });
+
+  $("#btnNew").on("click", function () {
+    $(".formulario").removeClass("d-none");
+    $(".info-result").addClass("d-none");
+  });
+  
 });
