@@ -143,6 +143,7 @@ ol {
 	padding-bottom: 24px;
 	padding-left: 45px;
 	padding-right: 45px;
+	border-bottom: 5px solid #8e8e8e;
 }
 
 .inner-header .logo {
