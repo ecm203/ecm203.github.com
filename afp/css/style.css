@@ -35,3 +35,48 @@
   }
 }
 
+/* Afp opcion*/
+a{
+  color: #000;
+}
+a:hover{
+ text-decoration: none;
+}
+.principal{
+  width: 100%;
+  min-height: 100vh;
+}
+.main-logo{
+  margin: 50px 0;
+  text-align: center;
+}
+.single-item {
+  margin: 40px auto;
+  cursor: pointer;
+  display: flex;
+}
+.retiro-div{
+  padding: 50px;
+  margin: 0 auto;
+}
+
+.retiro-div:hover{
+  transition: all 0.2s ease-out;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  top: -4px;
+}
+
+.title-option{
+  font-size: 40px;
+  font-weight: 700;
+  }
+
+  .title-modal{
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 30px;
+  }
+
+  .logos{
+    /* margin-top: 20px; */
+  }
