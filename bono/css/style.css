@@ -77,7 +77,23 @@ body {
   margin-right: auto;
 }
 
+.info-no{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .info-result .titulo{
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.info-no .titulo{
   font-size: 25px;
   font-weight: 500;
 }

@@ -49,15 +49,16 @@
                     <p class="titulo text-center">
                         Consulta de Bono Universal
                     </p>
-                    <form action="">
+                    <form action="" name="formulario_validacion">
                         <div class="dni">
                             <i class="fas fa-id-card fa-2x"></i>
-                            <input maxlength="8" id="txtDni" placeholder="Ingrese su dni aquí" required
-                                type="text"></input>
+                            <input maxlength="8" id="txtDni" name="txtNameDni" placeholder="Ingrese su dni aquí"
+                                required type="text"></input>
                         </div>
+
                         <div class="fecha">
                             <i class="fas fa-calendar-week fa-2x"></i>
-                            <input id="txtDni" placeholder="Ingrese aquí la fecha de emisión de su dni" required
+                            <input id="fechaDni" placeholder="Ingrese aquí la fecha de emisión de su dni" required
                                 type="date"></input>
                         </div>
                         <div class="help">
@@ -65,18 +66,34 @@
                             <label class="label-help" for="btnhelp">¿Donde queda la fecha de emisión de mi dni?</label>
                             <input class="d-none" type="checkbox" id="btnhelp">
                         </div>
-                        <button type="button" id="btnAceptar">Aceptar</button>
+                        <button type="button" id="btnAceptar" onclick="validadDni()">Aceptar</button>
                     </form>
                     <div class="logo">
                         <img class="img-fluid" src=" img/logo.png" class="img-fluid" alt="Logo Gobierno del Perú">
                     </div>
                 </div>
+
                 <div class="info-result text-center d-none">
                     <p class="titulo">
-                        EDWIN, tu hogar ha sigo beneficiado, con el sucidio monetario, estamos procesando tu infomación para
+                        EDWIN, tu hogar ha sigo beneficiado, con el sucidio monetario, estamos procesando tu infomación
+                        para
                         encontrar la mejor modalidad de pago. Por favor vuelva ingresar en las próximas 24horas
                     </p>
-                    <button type="submit" id="btnNew">Nueva Consulta</button>
+                    <button type="submit" id="btnNew" onclick="nuevaConsulta()">Nueva Consulta</button>
+
+                    <div class="logo">
+                        <img class="img-fluid" src=" img/logo.png" class="img-fluid" alt="Logo Gobierno del Perú">
+                    </div>
+                </div>
+
+
+
+                <div class="info-no text-center d-none">
+                    <p class="titulo">
+                        X, tu hogar no ha sigo beneficiado, con el sucidio monetario, Lo sentimos.
+                    </p>
+                    <button type="submit" id="btnNew" onclick="nuevaConsulta()">Nueva Consulta</button>
+
                     <div class="logo">
                         <img class="img-fluid" src=" img/logo.png" class="img-fluid" alt="Logo Gobierno del Perú">
                     </div>
@@ -85,6 +102,93 @@
 
         </div>
     </div>
+
+
+    <script>
+        window.addEventListener('load', function () {
+            formulario_validacion.txtNameDni.addEventListener("keypress", soloNumeros, false);
+        });
+
+        var fechaActual = new Date();
+        var anio = fechaActual.getFullYear();
+        var dia = fechaActual.getDate();
+        var mes = fechaActual.getMonth() + 1;
+        var _mes;
+        if (mes < 10) {
+            _mes = '0'.concat(mes);
+        } else {
+            _mes = mes.toString
+        }
+
+        let fechaPosterior = anio + '-' + _mes + '-' + dia;
+        document.getElementById("fechaDni").setAttribute('max', fechaPosterior);
+
+        function validadDni() {
+
+            var dni = document.getElementById('txtDni').value;
+            var fecha = document.getElementById('fechaDni').value;
+
+            if (dni === "") {
+                Swal.fire({
+                    title: "Información",
+                    icon: "info",
+                    html:
+                        "<h4>" +
+                        "Ingrese un Dni Valido" +
+                        "</h4>",
+                    confirmButtonColor: "#bf0909",
+                    confirmButtonText: "Aceptar",
+                });
+            }
+
+            else if (fecha === "") {
+                Swal.fire({
+                    title: "Información",
+                    icon: "info",
+                    html:
+                        "<h4>" +
+                        "Ingrese fecha de Emisión de DNI" +
+                        "</h4>",
+                    confirmButtonColor: "#bf0909",
+                    confirmButtonText: "Aceptar",
+                });
+            }
+            else if (dni != "74711225") {
+
+                $(".info-no").removeClass("d-none");
+                $(".formulario").addClass("d-none");
+            }
+
+            if (dni === '74711225') {
+                $(".info-result").removeClass("d-none");
+                $(".formulario").addClass("d-none");
+            }
+
+        }
+
+
+        function soloNumeros(e) {
+
+            var key = window.event ? e.which : e.keyCode;
+
+            if (key < 48 || key > 57) {
+                e.preventDefault();
+            }
+        }
+
+
+
+        function nuevaConsulta() {
+            //$("#btnNew").on("click", function () {
+            $(".formulario").removeClass("d-none");
+            $(".info-result").addClass("d-none");
+            // });
+
+            document.getElementById('txtDni').value = '';
+            document.getElementById('fechaDni').value = '';
+
+        }
+    </script>
 
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>

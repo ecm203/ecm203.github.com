@@ -31,7 +31,7 @@ $(document).ready(function () {
     });
   });
 
-  $("#btnAceptar").on("click", function () {
+/*   $("#btnAceptar").on("click", function () {
     $(".info-result").removeClass("d-none");
     $(".formulario").addClass("d-none");
   });
@@ -39,6 +39,6 @@ $(document).ready(function () {
   $("#btnNew").on("click", function () {
     $(".formulario").removeClass("d-none");
     $(".info-result").addClass("d-none");
-  });
+  }); */
   
 });
