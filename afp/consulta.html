@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retiro de Afp 25%</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/consulta.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="main-logo">
+                    <img style="width: 250px;" class="img-fluid" src="img/AAFP.png" alt="">
+                </div>
+                <p class="text-center help-1">Ingrese los datos correspondientes para realizar la consulta</p>
+            </div>
+            <div class="col-md-12">
+                <div class="formulario">
+                    <form action="" name="formulario_validacion">
+                        <div class="tipodocumento">
+                            <i class="fas fa-id-card fa-2x"></i>
+                                <select name="" id="ddlTipoDocumento">
+                                    <option value="0">Tipo de Documento</option>
+                                    <option value="0">DNI</option>
+                                    <option value="0">CE</option>
+                                    <option value="0">Carnet Militar y policial</option>
+                                    <option value="0">Libreta de Adolescente trab</option>
+                                    <option value="0">Pasaporte</option>
+                                    <option value="0">Otros</option>
+                                </select>
+                        </div>
+                       <div class="documento">
+                            <div class="dni">
+                                <input maxlength="8" id="txtDni" name="txtNameDni" placeholder="Número de documento"
+                                    required type="text"></input>
+                            </div>
+                            <div class="digit">
+                                <input maxlength="1" id="txtDigit" name="txtDigit" placeholder="Dígito verificador"
+                                required type="text"></input>  
+                            </div>
+                       </div>
+                        <div class="help text-right">
+                            <i class="far fa-question-circle"></i>
+                            <label class="label-help" for="btnhelp">¿Donde está el digito verificador?</label>
+                            <input class="d-none" type="checkbox" id="btnhelp">
+                        </div>
+                        <div class="fecha">
+                            <i class="fas fa-calendar-week fa-2x"></i>
+                            <input id="fechaDni" placeholder="Ingrese aquí la fecha de emisión de su dni" required
+                                type="date"></input>
+                        </div>
+                        <button type="button" id="btnAceptar" onclick="validadDni()">Aceptar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+                <div class="row logos">
+                    <div class="col-md-3 col-sm-6 col-xs-6">
+                        <img   src="img/Habitat.png" alt="">
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-6">
+                        <img   src="img/Integra.png" alt="">
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <img  src="img/Prima.png" alt="">
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <img   src="img/Profuturo.png" alt="">
+                    </div>
+                </div>
+        </div>
+    </div>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/sweetalert.js"></script>
+    <script src="js/consulta.js"></script>
+</body>
+</html>

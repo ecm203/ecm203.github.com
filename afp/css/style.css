@@ -9,7 +9,7 @@
   right: 0;
   bottom: 0;
   z-index: 10000;
-  background: #b0bcc2;
+  background: #fff;
   width: 100%;
   min-height: 100vh;
 }
@@ -26,8 +26,8 @@
 .loader {
   width: calc(100% - 0px);
   height: calc(100% - 0px);
-  border: 8px solid #162534;
-  border-top: 8px solid #eb1e1e;
+  border: 8px solid #b0bcc2;
+  border-top: 8px solid #2c92ab;
   border-radius: 50%;
   animation: rotate 5s linear infinite;
 }
@@ -48,7 +48,6 @@
   text-decoration: none;
 }
 .main-logo{
-  margin-top: 50px;
   text-align: center;
 }
 .help-1{
@@ -89,7 +88,7 @@
   }
 
   .logos{
-    margin-top: 100px;
+    margin-top: 50px;
     text-align: center
   }
 

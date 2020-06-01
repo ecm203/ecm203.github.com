@@ -1,0 +1,107 @@
+.main-logo{
+    text-align: center;
+  }
+
+  .logos{
+    margin-top: 50px;
+    text-align: center
+  }
+
+ img{
+    width: 50%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  @media (max-width: 576px) {
+
+    .logos{
+      margin-top: 50px;
+      text-align: center
+    }
+  }
+
+  /*-----------Consultar----------*/
+  .formulario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .dni,.digit,.tipodocumento,
+  .fecha {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #b5b5b5;
+    border-radius: 10px;
+    margin: 20px 0;
+    padding: 15px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .dni{
+    margin-right: 10px;
+    width: 80%;
+  }
+.documento{
+  display: flex;
+  flex-direction: row;
+}
+
+  
+  #ddlTipoDocumento,
+  input[type="text"] {
+    border: none;
+    margin-left: 10px;
+    width: 100%;
+    outline: none;
+    height: 80%;
+  }
+  
+  .fecha input {
+    width: 100%;
+    border: none;
+    margin-left: 10px;
+    width: 100%;
+    outline: none;
+    height: 80%;
+  }
+  
+  .user .btnInicio {
+    width: 100%;
+    border: none;
+    margin-left: 10px;
+    width: 100%;
+    outline: none;
+    height: 80%;
+  }
+  .label-help {
+    cursor: pointer;
+  }
+  .label-help:hover {
+    color: #2c92ab;
+  }
+  form button[type="button"],
+  div > button {
+    max-width: 150px;
+    width: 100%;
+    background: #2c92ab;
+    color: #f9f9f9;
+    border: none;
+    margin: 15px;
+    padding: 10px;
+    text-transform: uppercase;
+    border-radius: 2px;
+    float: right;
+    cursor: pointer;
+  }
+  form button[type="button"]:hover,
+  div > button:hover {
+    border: 2px solid #2c92ab;
+    background: #fff;
+    color: #2c92ab;
+    transition-property: all;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in;
+  }
