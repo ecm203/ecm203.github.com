@@ -26,7 +26,7 @@
 .loader {
   width: calc(100% - 0px);
   height: calc(100% - 0px);
-  border: 8px solid #b0bcc2;
+  border: 8px solid #fff;
   border-top: 8px solid #2c92ab;
   border-radius: 50%;
   animation: rotate 5s linear infinite;
