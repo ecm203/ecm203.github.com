@@ -63,7 +63,8 @@
   padding: 20px 30px;
   margin-left: auto;
   margin-right: auto;
-  width: 80%;
+  width: 85%;
+  height: 100%;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
   border-left: 4px solid #2c92ab;
   border-radius: 0 5px  5px 0;
@@ -101,6 +102,7 @@
   @media (max-width: 576px) {
     .retiro-div {
       margin-top: 30px;
+      height: unset;
     }
     .logos{
       margin-top: 50px;
