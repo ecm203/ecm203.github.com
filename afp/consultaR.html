@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,7 @@
     <link rel="stylesheet" href="css/animate.min.css">
     <link rel="stylesheet" href="css/consulta.css">
 </head>
+
 <body>
     <div class="container">
         <div class="row">
@@ -25,26 +27,26 @@
                     <form action="" name="formulario_validacion">
                         <div class="tipodocumento">
                             <i class="fas fa-id-card fa-2x"></i>
-                                <select name="" id="ddlTipoDocumento">
-                                    <option value="0">Tipo de Documento</option>
-                                    <option value="0">DNI</option>
-                                    <option value="0">CE</option>
-                                    <option value="0">Carnet Militar y policial</option>
-                                    <option value="0">Libreta de Adolescente trab</option>
-                                    <option value="0">Pasaporte</option>
-                                    <option value="0">Otros</option>
-                                </select>
+                            <select name="" id="ddlTipoDocumento">
+                                <option value="0">Tipo de Documento</option>
+                                <option value="0">DNI</option>
+                                <option value="0">CE</option>
+                                <option value="0">Carnet Militar y policial</option>
+                                <option value="0">Libreta de Adolescente trab</option>
+                                <option value="0">Pasaporte</option>
+                                <option value="0">Otros</option>
+                            </select>
                         </div>
-                       <div class="documento">
+                        <div class="documento">
                             <div class="dni">
                                 <input maxlength="8" id="txtDni" name="txtNameDni" placeholder="Número de documento"
                                     required type="text"></input>
                             </div>
                             <div class="digit">
                                 <input maxlength="1" id="txtDigit" name="txtDigit" placeholder="Dígito verificador"
-                                required type="text"></input>  
+                                    required type="text"></input>
                             </div>
-                       </div>
+                        </div>
                         <div class="help text-right">
                             <i class="far fa-question-circle"></i>
                             <label class="label-help" for="btnhelp">¿Donde está el digito verificador?</label>
@@ -55,27 +57,51 @@
                             <input id="fechaDni" placeholder="Ingrese aquí la fecha de emisión de su dni" required
                                 type="date"></input>
                         </div>
+                        <div class="conte_form_80 align-items-center justify-content-center mb-4 ng-scope"
+                            ng-if="constants.RECAPTCHA_KEY">
+                            <div vc-recaptcha="" ng-if="showRecaptcha"
+                                class="recaptcha-container ng-scope ng-isolate-scope" theme="'light'" lang="'es-419'"
+                                key="constants.RECAPTCHA_KEY" on-create="setRecaptchaId(widgetId)"
+                                on-success="setRecaptchaResponse(response)">
+                                <div style="width: 304px; height: 78px;">
+                                    <div>
+                                        <iframe
+                                            src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6Lcf5PkUAAAAAJnb2F5WlIoxlCunlxQACLxDVn11&amp;co=aHR0cHM6Ly9ib25vdW5pdmVyc2FsZmFtaWxpYXIucGU6NDQz&amp;hl
+                                    =es-419&amp;v=HYx6hBAtwYatsD8qzq7tXNTk&amp;theme=light&amp;size=normal&amp;cb=20whto9isezk"
+                                            width="304" height="78" role="presentation" name="a-fr6csqjhy9rn"
+                                            frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation 
+                                      allow-modals allow-popups-to-escape-sandbox"></iframe></div><textarea
+                                        id="g-recaptcha-response" name="g-recaptcha-response"
+                                        class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); 
+                                       margin: 10px 25px; padding: 0px; resize: none; display: none;">
+                                    </textarea>
+                                </div><iframe style="display: none;">
+
+                                </iframe>
+                            </div>
+                        </div>
                         <button type="button" id="btnAceptar" onclick="consultar()">Aceptar</button>
-                        <button type="button" id="btnVolver"" onclick="$(location).attr('href','index.html');">Volver</button>
+                        <button type="button" id="btnVolver"" onclick="
+                            $(location).attr('href','index.html');">Volver</button>
                     </form>
                 </div>
             </div>
         </div>
         <div class="col-md-12">
-                <div class="row logos">
-                    <div class="col-md-3 col-sm-6 col-xs-6">
-                        <img   src="img/Habitat.png" alt="">
-                    </div>
-                    <div class="col-md-3 col-sm-6 col-xs-6">
-                        <img   src="img/Integra.png" alt="">
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <img  src="img/Prima.png" alt="">
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <img   src="img/Profuturo.png" alt="">
-                    </div>
+            <div class="row logos">
+                <div class="col-md-3 col-sm-6 col-xs-6">
+                    <img src="img/Habitat.png" alt="">
                 </div>
+                <div class="col-md-3 col-sm-6 col-xs-6">
+                    <img src="img/Integra.png" alt="">
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <img src="img/Prima.png" alt="">
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <img src="img/Profuturo.png" alt="">
+                </div>
+            </div>
         </div>
     </div>
     <script src="js/jquery-3.5.1.min.js"></script>
@@ -86,4 +112,5 @@
     <script src="js/sweetalert.js"></script>
     <script src="js/consultaR.js"></script>
 </body>
+
 </html>
