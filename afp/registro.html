@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro Solicitud</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/registro.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class=" col-md-6 col-sm-12">
+                <div class="info-div">
+                    <p class="title-option">
+                        Datos de la consulta
+                    </p>
+                    <p class="info-option">
+                        <b>Documento:</b> DNI: 74711225 <br>
+                        <b>Fecha de Nacimiento:</b> 20/03/1999<br>
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <div class="afp-div">
+                    <p class="title-option">
+                        Información del afiliado
+                    </p>
+                    <p class="info-option">
+                        <b>Nombre</b> CAJAN MORALES,Edwin Ricardo
+                        <b>AFP</b> INTEGRA
+                        <b>CUSPP</b> 65465465456489
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="formulario">
+                    <p class="indicaciones">Porfavor completa los campos necesarios para completar la solicitud</p>
+                    <form action="" name="formulario_validacion">
+                        <div class="row-1">
+                            <div class="email">
+                                <i class="fas fa-envelope fa-2x"></i>
+                                <input type="email" placeholder="Correo Electronico" name="txtEmail" id="txtEmail">
+                            </div>
+                            <div class="telefono">
+                                <i class="fas fa-phone fa-2x"></i>
+                                <input maxlength="9" id="txtTelefono" name="txtTelefono"
+                                    placeholder="Número de Telefono" required type="text"></input>
+                            </div>
+                            <div class="cuenta">
+                                <i class="fas fa-file-invoice-dollar fa-2x"></i>
+                                <select name="" id="ddlTipoDocumento">
+                                    <option value="0">Tengo cuenta bancaria</option>
+                                    <option value="0">No tengo cuenta bancaria</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row-1">
+                            <div class="banco">
+                                <i class="fas fa-file-invoice-dollar"></i>
+                                <select name="" id="ddlTipoDocumento">
+                                    <option value="0">Banbif -CCI </option>
+                                    <option value="0">Banco de la Nación -CCI </option>
+                                    <option value="0">Banco Falabella - CCI </option>
+                                    <option value="0">Banco GNB - CII </option>
+                                    <option value="0">Banco de Crédito del Perú - CII </option>
+                                    <option value="0">BBVA Continental. - CII </option>
+                                    <option value="0">Banco Ripley - CII </option>
+                                    <option value="0">Banco Cencosud - CII </option>
+                                    <option value="0">Scotiabank Perú - CII </option>
+                                </select>
+                            </div>
+                            <div class="cci">
+                                <input maxlength="16" id="txtCci" name="txtTelefono"
+                                    placeholder="Código CCI 16 Dígitos" required type="text"></input>
+                            </div>
+                        </div>
+                        <p class="indicaciones"> Lugar de Residencia:</p>
+                        <div class="row-1">
+                            <div class="departamento">
+                                <select name="" id="ddlTipoDocumento">
+                                    <option value="0">Departamento </option>
+                                    <option value="0">Lima </option>
+                                </select>
+                            </div>
+                           <div class="provincia">
+                                <select name="" id="ddlTipoDocumento">
+                                    <option value="0">Provicia </option>
+                                    <option value="0">Lima </option>
+                                </select>
+                           </div>
+                           <div class="distrito">
+                                <select name="" id="ddlTipoDocumento">
+                                    <option value="0">Distrito </option>
+                                    <option value="0">Comas </option>
+                                </select>
+                           </div>
+                        </div>
+                        <div class="direccion">
+                            <i class="fas fa-map-marker-alt fa-2x"></i>
+                                <input maxlength="9" id="txtTelefono" name="txtTelefono"
+                                    placeholder="Dirección ejemplo: calle las ciruelas " required type="text"></input>
+                        </div>
+                        <button type="button" id="btnAceptar" onclick="registraSolicitud()">Registrar solicitud</button>
+                        <button type="button" id="btnVolver"" onclick="$(location).attr('href','index.html');">Volver</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/sweetalert.js"></script>
+    <script src="js/registro.js"></script>
+</body>
+
+</html>

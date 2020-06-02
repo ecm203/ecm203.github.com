@@ -1,0 +1,142 @@
+.afp-div,
+.info-div {
+  margin-top: 25px;
+  padding: 20px 30px;
+  width: 70%;
+  height: 100%;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  border-top: 4px solid #2c92ab;
+  border-radius: 0 5px 5px 0;
+  color: #2c92ab;
+}
+.info-div {
+  margin-left: auto;
+  margin-right: auto/2;
+}
+.afp-div {
+  margin-left: auto/2;
+  margin-right: auto;
+}
+
+.afp-div:hover,
+.info-div:hover {
+  background-color: #2c92ab;
+  transition: all 0.3s ease-out;
+  color: #fff;
+}
+
+.title-option {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.title-modal {
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 30px;
+}
+
+.logos {
+  margin-top: 50px;
+  text-align: center;
+}
+
+/*------------formulario-----------*/
+.formulario {
+  margin-top: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+.indicaciones {
+  font-size: 1.25em;
+  font-weight: 600;
+}
+.row-1 {
+  display: flex;
+  flex-direction: row;
+}
+.email,
+.telefono,
+.cuenta,
+.banco,
+.cci,
+.departamento,
+.provincia,
+.distrito,
+.direccion {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #b5b5b5;
+  border-radius: 10px;
+  margin: 20px 5px;
+  width: 100%;
+  padding: 15px;
+  justify-content: space-between;
+  align-items: center;
+}
+.cci{
+    width: 70%;
+}
+#ddlTipoDocumento,
+input[type="text"],
+input[type="email"] {
+  border: none;
+  margin-left: 10px;
+  width: 100%;
+  outline: none;
+}
+
+form button[type="button"],
+div > button {
+  max-width: 200px;
+  width: 100%;
+  background: #2c92ab;
+  color: #f9f9f9;
+  border: none;
+  margin: 15px;
+  padding: 10px;
+  text-transform: uppercase;
+  border-radius: 2px;
+  float: right;
+  cursor: pointer;
+}
+form button[type="button"]:hover,
+div > button:hover {
+  border: 2px solid #2c92ab;
+  background: #fff;
+  color: #2c92ab;
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in;
+}
+
+@media (max-width: 768px) {
+  .afp-div,
+   .info-div{
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    height: unset;
+    width: 100%;
+  }
+  .formulario{
+      width: 100%;
+  }
+}
+
+@media (max-width: 576px){
+    .afp-div,
+    .info-div{
+     width: 90%;
+   }
+   .formulario{
+       width: 90%;
+   }
+    .row-1{
+        flex-direction: column;
+    }
+    .cci{
+        width: 100%;
+    }
+}

@@ -13,6 +13,7 @@ $(document).ready(function () {
   });
   
   function consultar(){
-    url = "registro.html";
-    $(location).attr("href", url);
+      url = "retiro25.html";
+     $(location).attr("href", url);
+    
   }
