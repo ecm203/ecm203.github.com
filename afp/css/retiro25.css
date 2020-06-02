@@ -1,0 +1,114 @@
+.main-logo{
+    text-align: center;
+  }
+
+  .logos{
+    margin-top: 50px;
+    text-align: center
+  }
+
+ img{
+    width: 50%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  @media (max-width: 576px) {
+
+    .logos{
+      margin-top: 50px;
+      text-align: center
+    }
+  }
+
+  /*-----------------Info------------*/
+  .monto-div{
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 5px;
+    width: 40%;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0 5px  5px 0;
+  }
+  
+  .title-option{
+      background-color: #2c92ab;
+      color: #fff;
+      padding: 10px;
+      font-size: 1.5em;
+      font-weight: 600;
+  }
+
+  .info-option{
+        font-size: 2.5em;
+        font-weight: 700;
+  }
+
+  .info-div{
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    width: 40%;
+    background-color: #B2E3F0;
+}
+
+
+  /*monto llenar*/
+  .formulario{
+    margin-top: 20px;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .monto-form{
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #b5b5b5;
+    border-radius: 10px;
+    margin: 5px 0;
+    padding: 15px;
+    align-items: center;
+  }
+
+
+  input[type="text"] {
+    border: none;
+    margin-left: 10px;
+    width: 100%;
+    outline: none;
+    height: 80%;
+  }
+  
+  form button[type="button"],
+  div > button {
+    max-width: 150px;
+    width: 100%;
+    background: #2c92ab;
+    color: #f9f9f9;
+    border: none;
+    margin: 15px;
+    padding: 10px;
+    text-transform: uppercase;
+    border-radius: 2px;
+    float: right;
+    cursor: pointer;
+  }
+  form button[type="button"]:hover,
+  div > button:hover {
+    border: 2px solid #2c92ab;
+    background: #fff;
+    color: #2c92ab;
+    transition-property: all;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in;
+  }
+
+
+  @media (max-width: 768px) {
+    .formulario, .info-div,.monto-div {
+        width: 100%;
+    }
+    
+  }
