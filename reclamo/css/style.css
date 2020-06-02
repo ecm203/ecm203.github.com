@@ -180,7 +180,13 @@
   transition-duration: 0.2s;
   transition-timing-function: ease-in;
 }
-
+/*-----------metodo------------*/
+.info-metodo{
+  background-color: var(--primary);
+  color: #fff;
+  padding: 15px;
+  border-radius: 5px;
+}
 @media (max-width: 768px) {
   
   .li-steps {
