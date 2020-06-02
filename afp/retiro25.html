@@ -40,17 +40,18 @@
             </div>
             <div class="col-md-12">
                 <div class="formulario">
-                    <form action="" name="formulario_validacion">
+                    <form action="" name="formulario_validacionRetiro">
                         <label for="txtMonto"><b>Ingrese el monto que desea retirar:</b></label>
                         <div class="monto-form">
                             <i class="fas fa-money-check-alt fa-2x"></i>
-                            <input id="txtMonto" placeholder="Ejemplo: 200" required type="text"></input>
+                            <input id="txtMonto" name="txtNameMonto" placeholder="Ejemplo: 200" required type="text"></input>
                         </div>
                         <button type="button" id="btnAceptar" onclick="retiro25()">Aceptar</button>
-                        <button type="button" id="btnVolver"" onclick="$(location).attr('href','index.html');">Volver</button>
+                        <button type="button" id="btnVolver"" onclick="
+                            $(location).attr('href','index.html');">Volver</button>
                     </form>
                 </div>
-               
+
             </div>
         </div>
         <div class="col-md-12">

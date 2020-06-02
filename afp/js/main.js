@@ -34,19 +34,19 @@ $(document).ready(function () {
               <td>26 o 27 de mayo</td>
             </tr>
             <tr>
-              <th>4 4</th>
+              <th>4</th>
               <td>28 o 29 de mayo</td>
             </tr>
             <tr>
-              <th>5 5</th>
+              <th>5</th>
               <td>1 o 2 de junio</td>
             </tr>
             <tr>
-              <th>6 6</th>
+              <th>6</th>
               <td>3 o 4 de junio</td>
             </tr>
             <tr>
-              <th>7 7</th>
+              <th>7</th>
               <td>5 o 8 de junio</td>
             </tr>
             <tr>

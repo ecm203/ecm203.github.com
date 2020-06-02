@@ -1,11 +1,6 @@
-.main-logo{
-  text-align: center;
-  margin-top: 20px;
-}
-
 .afp-div,
 .info-div {
-  margin-top: 30px;
+  margin-top: 25px;
   padding: 20px 30px;
   width: 70%;
   height: 100%;
@@ -83,7 +78,11 @@
 .cci{
     width: 70%;
 }
-#ddlTipoDocumento,
+#ddlTipoDepartamento,
+#ddlTipoProvincia,
+#ddlTipoDistrito,
+#ddlTipobanco,
+#ddlTipoCuenta,
 input[type="text"],
 input[type="email"] {
   border: none;

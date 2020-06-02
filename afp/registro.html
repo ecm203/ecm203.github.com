@@ -16,11 +16,6 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
-                <div class="main-logo">
-                    <img style="width: 250px;" class="img-fluid" src="img/AAFP.png" alt="">
-                </div>
-            </div>
             <div class=" col-md-6 col-sm-12">
                 <div class="info-div">
                     <p class="title-option">
@@ -47,7 +42,7 @@
             <div class="col-md-12">
                 <div class="formulario">
                     <p class="indicaciones">Porfavor completa los campos necesarios para completar la solicitud</p>
-                    <form action="" name="formulario_validacion">
+                    <form action="" name="formulario_registro">
                         <div class="row-1">
                             <div class="email">
                                 <i class="fas fa-envelope fa-2x"></i>
@@ -55,65 +50,68 @@
                             </div>
                             <div class="telefono">
                                 <i class="fas fa-phone fa-2x"></i>
-                                <input maxlength="9" id="txtTelefono" name="txtTelefono"
+                                <input maxlength="9" id="txtTelefono" name="txtNameTelefono"
                                     placeholder="Número de Telefono" required type="text"></input>
                             </div>
                             <div class="cuenta">
                                 <i class="fas fa-file-invoice-dollar fa-2x"></i>
-                                <select name="" id="ddlTipoDocumento">
-                                    <option value="0">Tengo cuenta bancaria</option>
-                                    <option value="0">No tengo cuenta bancaria</option>
+                                <select name="" id="ddlTipoCuenta">
+                                    <option value="0">Seleccione</option>
+                                    <option value="1">Tengo cuenta bancaria</option>
+                                    <option value="2">No tengo cuenta bancaria</option>
                                 </select>
                             </div>
                         </div>
                         <div class="row-1">
                             <div class="banco">
                                 <i class="fas fa-file-invoice-dollar"></i>
-                                <select name="" id="ddlTipoDocumento">
-                                    <option value="0">Banbif -CCI </option>
-                                    <option value="0">Banco de la Nación -CCI </option>
-                                    <option value="0">Banco Falabella - CCI </option>
-                                    <option value="0">Banco GNB - CII </option>
-                                    <option value="0">Banco de Crédito del Perú - CII </option>
-                                    <option value="0">BBVA Continental. - CII </option>
-                                    <option value="0">Banco Ripley - CII </option>
-                                    <option value="0">Banco Cencosud - CII </option>
-                                    <option value="0">Scotiabank Perú - CII </option>
+                                <select name="" id="ddlTipobanco">
+                                    <option value="0">Seleccione</option>
+                                    <option value="1">Banbif -CCI </option>
+                                    <option value="2">Banco de la Nación -CCI </option>
+                                    <option value="3">Banco Falabella - CCI </option>
+                                    <option value="4">Banco GNB - CII </option>
+                                    <option value="5">Banco de Crédito del Perú - CII </option>
+                                    <option value="6">BBVA Continental. - CII </option>
+                                    <option value="7">Banco Ripley - CII </option>
+                                    <option value="8">Banco Cencosud - CII </option>
+                                    <option value="9">Scotiabank Perú - CII </option>
                                 </select>
                             </div>
                             <div class="cci">
-                                <input maxlength="16" id="txtCci" name="txtTelefono"
-                                    placeholder="Código CCI 16 Dígitos" required type="text"></input>
+                                <input maxlength="16" id="txtCci" name="txtNameCCI" placeholder="Código CCI 16 Dígitos"
+                                    required type="text"></input>
                             </div>
                         </div>
                         <p class="indicaciones"> Lugar de Residencia:</p>
                         <div class="row-1">
                             <div class="departamento">
-                                <select name="" id="ddlTipoDocumento">
+                                <select name="" id="ddlTipoDepartamento">
                                     <option value="0">Departamento </option>
-                                    <option value="0">Lima </option>
+                                    <option value="1">Lima </option>
                                 </select>
                             </div>
-                           <div class="provincia">
-                                <select name="" id="ddlTipoDocumento">
-                                    <option value="0">Provicia </option>
-                                    <option value="0">Lima </option>
+                            <div class="provincia">
+                                <select name="" id="ddlTipoProvincia">
+                                    <option value="0">Pronvicia </option>
+                                    <option value="1">Lima </option>
                                 </select>
-                           </div>
-                           <div class="distrito">
-                                <select name="" id="ddlTipoDocumento">
+                            </div>
+                            <div class="distrito">
+                                <select name="" id="ddlTipoDistrito">
                                     <option value="0">Distrito </option>
-                                    <option value="0">Comas </option>
+                                    <option value="1">Comas </option>
                                 </select>
-                           </div>
+                            </div>
                         </div>
                         <div class="direccion">
                             <i class="fas fa-map-marker-alt fa-2x"></i>
-                                <input maxlength="9" id="txtTelefono" name="txtTelefono"
-                                    placeholder="Dirección ejemplo: calle las ciruelas " required type="text"></input>
+                            <input maxlength="9" id="txtDireccion" name="txtDireccion"
+                                placeholder="Dirección ejemplo: calle las ciruelas " required type="text"></input>
                         </div>
                         <button type="button" id="btnAceptar" onclick="registraSolicitud()">Registrar solicitud</button>
-                        <button type="button" id="btnVolver"" onclick="$(location).attr('href','index.html');">Volver</button>
+                        <button type="button" id="btnVolver"" onclick="
+                            $(location).attr('href','index.html');">Volver</button>
                     </form>
                 </div>
             </div>

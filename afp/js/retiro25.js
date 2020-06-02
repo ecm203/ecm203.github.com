@@ -1,3 +1,7 @@
+window.addEventListener('load', function () {
+  formulario_validacionRetiro.txtNameMonto.addEventListener("keypress", soloNumeros, false);
+});
+
 $(document).ready(function () {
   Swal.fire({
     icon: "info",
@@ -24,4 +28,14 @@ $(document).ready(function () {
 function retiro25(){
   url = "registro.html";
   $(location).attr("href", url);
+}
+
+
+function soloNumeros(e) {
+
+  var key = window.event ? e.which : e.keyCode;
+
+  if (key < 48 || key > 57) {
+    e.preventDefault();
+  }
 }

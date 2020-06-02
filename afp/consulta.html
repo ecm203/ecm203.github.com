@@ -29,21 +29,22 @@
                             <i class="fas fa-id-card fa-2x"></i>
                             <select name="" id="ddlTipoDocumento">
                                 <option value="0">Tipo de Documento</option>
-                                <option value="0">DNI</option>
-                                <option value="0">CE</option>
-                                <option value="0">Carnet Militar y policial</option>
-                                <option value="0">Libreta de Adolescente trab</option>
-                                <option value="0">Pasaporte</option>
-                                <option value="0">Otros</option>
+                                <option value="1">DNI</option>
+                                <option value="2">CE</option>
+                                <option value="3">Carnet Militar y policial</option>
+                                <option value="4">Libreta de Adolescente trab</option>
+                                <option value="5">Pasaporte</option>
+                                <option value="6">Otros</option>
                             </select>
                         </div>
+
                         <div class="documento">
                             <div class="dni">
                                 <input maxlength="8" id="txtDni" name="txtNameDni" placeholder="Número de documento"
                                     required type="text"></input>
                             </div>
                             <div class="digit">
-                                <input maxlength="1" id="txtDigit" name="txtDigit" placeholder="Dígito verificador"
+                                <input maxlength="1" id="txtDigit" name="txtNameDigit" placeholder="Dígito verificador"
                                     required type="text"></input>
                             </div>
                         </div>
@@ -84,6 +85,7 @@
                         <button type="button" id="btnVolver"" onclick="
                             $(location).attr('href','index.html');">Volver</button>
                     </form>
+
                 </div>
             </div>
         </div>
@@ -111,6 +113,10 @@
     <script src="js/jquery.magnific-popup.min.js"></script>
     <script src="js/sweetalert.js"></script>
     <script src="js/consulta.js"></script>
+
+
+
+
 </body>
 
 </html>
