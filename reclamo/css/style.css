@@ -4,95 +4,6 @@
   --light: #8e8e8e;
 }
 
-/*----------------------------------------*/
-/* Template default CSS
-/*----------------------------------------*/
-
-html,
-body {
-	height: 100%;
-	font-family: "Montserrat", sans-serif;
-	-webkit-font-smoothing: antialiased;
-	font-smoothing: antialiased;
-	background: none;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	margin: 0;
-	color: #111111;
-	font-weight: 500;
-	font-family: "Montserrat", sans-serif;
-}
-
-h1 {
-	font-size: 70px;
-}
-
-h2 {
-	font-size: 36px;
-}
-
-h3 {
-	font-size: 30px;
-}
-
-h4 {
-	font-size: 24px;
-}
-
-h5 {
-	font-size: 18px;
-}
-
-h6 {
-	font-size: 16px;
-}
-
-p {
-	font-size: 15px;
-	color: #7b7b7b;
-	font-weight: 400;
-	line-height: 1.6;
-	font-family: "Montserrat", sans-serif;
-	margin: 0 0 15px 0;
-}
-
-img {
-	max-width: 100%;
-}
-
-input:focus,
-select:focus,
-button:focus,
-textarea:focus {
-	outline: none;
-}
-
-a:hover,
-a:focus {
-	text-decoration: none;
-	outline: none;
-	color: #fff;
-}
-
-ul,
-ol {
-	padding: 0;
-	margin: 0;
-}
-
-@font-face {
-	font-family: "FuturaBT-Book";
-	src: url("../fonts/FuturaBT-Book.eot?#iefix") format("embedded-opentype"), url("../fonts/FuturaBT-Book.woff") format("woff"), url("../fonts/FuturaBT-Book.ttf") format("truetype"), url("../fonts/FuturaBT-Book.svg#FuturaBT-Book") format("svg");
-	font-weight: normal;
-	font-style: normal;
-}
-
 /*-----------------------------------Loading Page--------------------------------------------- */
 .panel {
   position: fixed;
@@ -130,460 +41,60 @@ ol {
   }
 }
 
-
-/*--------------------- Header -----------------------*/
-
-/*---------------------
-  Header
------------------------*/
-
-.header-section {
-	height: 104px;
-	padding-top: 38px;
-	padding-bottom: 24px;
-	padding-left: 45px;
-	padding-right: 45px;
-	border-bottom: 5px solid #8e8e8e;
+.retiro {
+  color: inherit;
+}
+.retiro:hover {
+  color: inherit;
+  text-decoration: none;
 }
 
-.inner-header .logo {
-	float: left;
+.retiro-div {
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px 30px;
+  width: 90%;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  border-left: 4px solid var(--dark);
+  border-radius: 0 5px 5px 0;
+  color: var(--dark);
 }
 
-.inner-header .header-right {
-	float: right;
-	line-height: 30px;
+.retiro-div:hover {
+  border-left: 10px solid var(--dark);
+  transition: all 0.3s ease-out;
 }
 
-.inner-header .header-right img {
-	display: inline-block;
-	margin-right: 20px;
+.title-option {
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+.info-option {
+  font-size: 1.25em;
+}
+
+/*--------------- Especificar------------*/
+[type="button"]
+{
+  max-width: 200px;
+  width: 100%;
+  background: var(--dark);
+  color: #f9f9f9;
+  border: none;
+  margin: 15px;
+  padding: 10px;
+  text-transform: uppercase;
+  border-radius: 2px;
+  float: right;
   cursor: pointer;
-  width: 18px;
 }
-
-.inner-header .header-right a {
-	display: inline-block;
-	position: relative;
-}
-
-.inner-header .header-right a img {
-	margin-right: 0;
-	margin-left: 4px;
-}
-
-.inner-header .header-right a span {
-	font-size: 11px;
-	color: #1e1e1e;
-	width: 18px;
-	height: 18px;
-	border: 2px solid #D0D7DB;
-	background: #fff;
-	display: inline-block;
-	line-height: 15px;
-	text-align: center;
-	border-radius: 50%;
-	font-weight: 600;
-	position: absolute;
-	left: -9px;
-	top: 14px;
-}
-
-.inner-header .user-access {
-	float: right;
-	margin-right: 100px;
-}
-
-.inner-header .user-access a {
-	color: #1e1e1e;
-	font-size: 16px;
-	display: inline-block;
-	font-weight: 500;
-	position: relative;
-	line-height: 42px;
-}
-
-.inner-header .user-access a.in {
-	color: #838383;
-	margin-left: 15px;
-	position: relative;
-}
-
-.inner-header .user-access a.in::before {
-	position: absolute;
-	left: -13px;
-	top: 1px;
-	color: #1e1e1e;
-	content: "/";
-}
-
-.inner-header .main-menu {
-	float: right;
-	margin-right: 150px;
-}
-
-.inner-header .main-menu ul li {
-	display: inline-block;
-	margin-left: 60px;
-	position: relative;
-}
-
-.inner-header .main-menu ul li a {
-	color: #1e1e1e;
-	font-size: 16px;
-	display: inline-block;
-	font-weight: 500;
-	position: relative;
-	line-height: 42px;
-}
-
-.inner-header .main-menu ul li a.active:after {
-	opacity: 1;
-}
-
-.inner-header .main-menu ul li a:hover:after {
-	opacity: 1;
-}
-
-.inner-header .main-menu ul li a:after {
-	position: absolute;
-	left: 0;
-	bottom: 7px;
-	width: 100%;
-	height: 2px;
-	background: #1e1e1e;
-	content: "";
-	opacity: 0;
-	-webkit-transform: all 0.3s;
-	-webkit-transition: all 0.3s;
-	transition: all 0.3s;
-}
-
-.inner-header .main-menu ul li:hover .sub-menu {
-	visibility: visible;
-	opacity: 1;
-	margin-top: 0;
-}
-
-.inner-header .main-menu ul li .sub-menu {
-	position: absolute;
-	list-style: none;
-	width: 220px;
-	left: 0;
-	top: 100%;
-	padding: 20px 0;
-	visibility: hidden;
-	opacity: 0;
-	margin-top: 50px;
-	background: #fff;
-	z-index: 99;
-	-webkit-transition: all 0.4s;
-	transition: all 0.4s;
-	-webkit-box-shadow: 2px 7px 20px rgba(0, 0, 0, 0.2);
-	box-shadow: 2px 7px 20px rgba(0, 0, 0, 0.2);
-}
-
-.inner-header .main-menu ul li .sub-menu li {
-	display: block;
-	margin: 0;
-}
-
-.inner-header .main-menu ul li .sub-menu li a {
-	display: block;
-	color: #000;
-	margin-right: 0;
-	padding: 0px 20px;
-	font-size: 14px;
-	line-height: 2.3;
-}
-
-.inner-header .main-menu ul li .sub-menu li a:after {
-	display: none;
-}
-
-.slicknav_menu {
-	display: none;
-}
-
-/* ---------------------------------- Responsive Media Styles ---------------------------------*/
-
-@media only screen and (min-width: 1500px) and (max-width: 1920px) {
-	.inner-header .user-access {
-		float: right;
-		margin-right: 200px;
-	}
-	.inner-header .main-menu {
-		float: right;
-		margin-right: 238px;
-	}
-}
-
-@media only screen and (min-width: 1200px) and (max-width: 1340px) {
-	.inner-header .user-access {
-		margin-right: 60px;
-	}
-	.inner-header .main-menu {
-		margin-right: 55px;
-	}
-}
-
-/* Medium Device : 1280px */
-
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-	.inner-header .main-menu {
-		margin-right: 70px;
-	}
-	.inner-header .main-menu ul li {
-		margin-left: 45px;
-	}
-	.inner-header .user-access {
-		display: none;
-	}
-	}
-
-/* Tablet Device : 768px */
-
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-	.header-section {
-		padding-left: 0;
-		padding-right: 0;
-	}
-	.inner-header .main-menu {
-		margin-right: 50px;
-	}
-	.inner-header .main-menu ul li {
-		margin-left: 30px;
-	}
-	.header-info .shipping-chrg {
-		float: none;
-		margin-right: 0;
-	}
-	.header-info .student-disc {
-		float: none;
-	}
-	.header-info .coupon-code {
-		float: none;
-	}
-	.inner-header .user-access {
-		display: none;
-	}
-	.page-add .page-breadcrumb {
-		margin-bottom: 20px;
-	}
-	.lookbok-left {
-		margin-bottom: 30px;
-	}
-	.checkout-form .in-name {
-		text-align: left;
-	}
-	.social-links a {
-		margin-right: 15px;
-	}
-	.social-links a i {
-		margin-right: 10px;
-	}
-	.cart-btn {
-		padding: 50px 30px;
-	}
-	.cart-btn .coupon-input {
-		padding-left: 0;
-		margin-bottom: 30px;
-	}
-	.cart-btn .coupon-input input {
-		width: 100%;
-	}
-	.shipping-info .cs-item {
-		margin-right: 15px;
-	}
-	.contact-form {
-		margin-bottom: 40px;
-	}
-	.logo-section {
-		padding: 70px 0;
-	}
-	.lookbok-left {
-		padding-top: 0;
-	}
-}
-
-/* Large Mobile : 480px */
-
-@media only screen and (max-width: 767px) {
-	.header-section {
-		height: auto;
-		padding-bottom: 0;
-	}
-	.inner-header {
-		overflow: hidden;
-	}
-	.inner-header .user-access {
-		margin-right: 10px;
-	}
-	.slicknav_menu {
-		display: block;
-		margin-top: 10px;
-	}
-	.inner-header .header-right {
-		margin-right: 20px;
-		margin-top: 4px;
-	}
-	.slicknav_nav ul {
-		margin: 0 0 0 0;
-	}
-	.main-menu {
-		display: none;
-	}
-	.header-section {
-		overflow: hidden;
-	}
-	.single-slider-item h1 {
-		font-size: 72px;
-	}
-	.single-slider-item h2 {
-		font-size: 42px;
-	}
-	.lookbok-left {
-		margin-bottom: 30px;
-	}
-	.contact-form {
-		margin-bottom: 40px;
-	}
-	.newslatter-form form button {
-		position: relative;
-		margin-top: 15px;
-		width: 100%;
-	}
-	.header-info .shipping-chrg {
-		float: none;
-		margin-right: 0;
-	}
-	.header-info .student-disc {
-		float: none;
-	}
-	.header-info .coupon-code {
-		float: none;
-	}
-	.hero-items .owl-nav button[type=button] {
-		left: 5px;
-	}
-	.social-links {
-		text-align: center;
-	}
-	.social-links a {
-		margin-right: 20px;
-	}
-	.social-links a i {
-		margin-right: 0;
-	}
-	.social-links a span {
-		display: none;
-	}
-	.lookbok-pic .pic-text {
-		font-size: 115px;
-		line-height: 82px;
-	}
-	.page-add .page-breadcrumb {
-		margin-bottom: 20px;
-	}
-	.cart-table {
-		overflow-y: auto;
-	}
-	.cart-btn {
-		padding: 50px 30px;
-	}
-	.cart-btn .coupon-input {
-		padding-left: 0;
-		margin-bottom: 30px;
-	}
-	.cart-btn .coupon-input input {
-		width: 100%;
-	}
-	.shipping-info .cs-item {
-		margin-bottom: 15px;
-	}
-	.total-info .total-table {
-		overflow-y: auto;
-	}
-	.checkout-form .in-name {
-		text-align: left;
-	}
-	.logo-section {
-		padding: 70px 0;
-	}
-	.lookbok-left {
-		padding-top: 0;
-	}
-	.header-info .header-item {
-		margin-bottom: 7px;
-	}
-	.search-model-form input {
-		width: 100%;
-	}
-}
-
-/* Small : 320px */
-
-@media only screen and (max-width: 479px) {
-	.header-section {
-		padding-left: 0;
-		padding-right: 0;
-	}
-	.inner-header .header-right {
-		margin-right: 0;
-	}
-	.features-box .single-box-item.first-box .box-text {
-		right: 9px;
-		top: 7px;
-	}
-	.features-box .single-box-item .box-text h2 {
-		font-size: 40px;
-	}
-	.features-box .single-box-item.first-box .box-text .trend-alert {
-		margin-bottom: 7px;
-	}
-	.features-box .single-box-item.second-box .box-text {
-		left: 20px;
-		top: 56px;
-	}
-	.features-box .single-box-item.large-box .box-text {
-		left: 20px;
-		top: 28px;
-	}
-	.features-box .single-box-item.large-box .box-text h2 {
-		font-size: 40px;
-	}
-	.product-filter .product-controls li {
-		margin-bottom: 10px;
-	}
-	.section-title h2 {
-		font-size: 36px;
-	}
-	.lookbok-pic img {
-		height: auto;
-	}
-	.lookbok-pic .pic-text {
-		font-size: 65px;
-		line-height: 47px;
-	}
-	.social-links a {
-		margin-right: 10px;
-	}
-	.product-content .product-quantity {
-		margin-bottom: 15px;
-	}
-	.cart-btn .coupon-input input {
-		width: 100%;
-	}
-	.cart-btn .site-btn.update-btn {
-		margin-right: 0;
-	}
-	.cart-btn .site-btn.clear-btn {
-		margin-bottom: 15px;
-	}
-	.header-info .header-item img {
-		display: block;
-	}
-	.header-info {
-		padding: 10px 0;
-	}
+[type="button"]:hover {
+  border: 2px solid var(--dark);
+  background: #fff;
+  color: var(--dark);
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in;
 }
