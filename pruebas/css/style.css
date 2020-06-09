@@ -1,4 +1,4 @@
-header {
+#header {
   background-color: #000;
   padding: 25px 15px 15px 15px;
   border-bottom: 5px solid #d10024;
@@ -31,6 +31,9 @@ header {
 .logo-link img {
   width: 50px;
 }
+.menum {
+  display: none;
+}
 .principal-menu {
   position: absolute;
   width: 100%;
@@ -58,8 +61,7 @@ header {
   height: 100%;
 }
 .item-li {
-  /* padding: 10px 5px 10px 20px; */
-  height: calc(100%/7);
+  height: calc(100% / 7);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -70,7 +72,6 @@ header {
   position: absolute;
   top: 0;
   left: 100%;
-  /* background-color: #d10024; */
   display: none;
 }
 .item-li:hover {
@@ -83,13 +84,13 @@ header {
   display: inline-block;
   transition: 0.8s;
 }
-.sub-items{
+.sub-items {
   float: left;
   width: 60%;
   height: 100%;
   padding: 15px 15px;
 }
-.ul-sub-items{
+.ul-sub-items {
   width: 100%;
   height: 100%;
   list-style: none;
@@ -100,28 +101,28 @@ header {
   align-items: center;
   flex-wrap: wrap;
 }
-.li-sub-items{
+.li-sub-items {
   width: 25%;
   text-align: center;
 }
-.li-sub-items a{
+.li-sub-items a {
   color: #000;
 }
-.li-sub-items a:hover{
-  color: #D10024;
+.li-sub-items a:hover {
+  color: #d10024;
   transition: 0.2s all;
-} 
-.li-sub-items a::after{
+}
+.li-sub-items a::after {
   content: "";
   display: block;
   width: 0%;
   height: 3px;
-  background-color: #D10024;
+  background-color: #d10024;
   -webkit-transition: 0.2s all;
   transition: 0.2s all;
   margin-top: 5px;
 }
-.li-sub-items a:hover::after{
+.li-sub-items a:hover::after {
   width: 100%;
 }
 .img-menu {
@@ -129,7 +130,7 @@ header {
   width: 40%;
   height: 100%;
 }
-.img-menu img{
+.img-menu img {
   height: 100%;
 }
 div.menu-close {
@@ -193,17 +194,17 @@ div.menu-close {
   background-color: #fff;
   color: #000;
 }
-@media (max-width: 1200px){
-  .li-sub-items{
-    width: calc(100%/3);
+@media (max-width: 1200px) {
+  .li-sub-items {
+    width: calc(100% / 3);
   }
 }
-@media (max-width: 851px){
+@media (max-width: 851px) {
   .item-li {
     text-align: center;
   }
-  .li-sub-items{
-    width: calc(100%/2);
+  .li-sub-items {
+    width: calc(100% / 2);
   }
 }
 
@@ -228,6 +229,10 @@ div.menu-close {
     justify-content: space-around;
   }
   .menu {
+    display: none;
+  }
+  .menum {
+    display: flex;
     margin-left: 15px;
   }
 
@@ -254,4 +259,4 @@ div.menu-close {
 }
 .main {
   background-color: rgba(0, 0, 0, 0.5);
-}
+} 

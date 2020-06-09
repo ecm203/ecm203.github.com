@@ -12,7 +12,6 @@ $(document).ready(function(){
         $(".menu-close").css("display","none");
         $("#main").removeClass("main")
      })
+
+     new WOW().init();  
 })
-
-
-
