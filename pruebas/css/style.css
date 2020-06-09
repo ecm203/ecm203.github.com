@@ -8,7 +8,6 @@ header{
 .main-header{
     display: flex;
     align-items: center;
-    width: 100%;
 }
 .logo-header {
     display: flex;
@@ -80,18 +79,20 @@ header{
     background-color: #fff;
     color: #000;
 }
-
 @media (max-width: 768px) {
     .search-header {
       display: none;
     }
     .logo-header {
-        justify-content: space-between;
+        justify-content: space-around;
     }
     .menu-mobile{
-        margin-left: 5px;
+        margin-left: 15px;
     }
     .logo-letras{
         display: none;
+    }
+    .menu-icons{
+        justify-content: space-around;
     }
 }
