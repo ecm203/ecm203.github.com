@@ -68,8 +68,8 @@
     --mm-color-text: #fff;
     --mm-color-text-dimmed: #fff;
     --mm-color-background: #000;
-    --mm-color-background-highlight: #d10024;
-    --mm-color-background-emphasis: #d10024;
+    --mm-color-background-highlight: #fff;
+    --mm-color-background-emphasis: #fff;
     --mm-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 } 
 .mm-hidden {
