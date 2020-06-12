@@ -11,26 +11,25 @@
 // }
 
 $(document).ready(function () {
-
   /*----------- Menu mobile------------*/
-  new Mmenu(document.querySelector('#menu'));
+  new Mmenu(document.querySelector("#menu"));
 
   /*----------------Menu normal------------*/
-  $(".menu-open").on('click',function(){
-    $(".menu-close").css("display","flex");
-    $(".principal-menu").css("display","block");
+  $(".menu-open").on("click", function () {
+    $(".menu-close").css("display", "flex");
+    $(".principal-menu").css("display", "block");
     $("#main").addClass("main");
-   $(".menu-open").css("display","none");
-})
+    $(".menu-open").css("display", "none");
+  });
 
-$(".menu-close").on('click',function(){
-    $(".menu-open").css("display","flex");
-    $(".principal-menu").css("display","none");
-    $(".menu-close").css("display","none");
-    $("#main").removeClass("main")
- })
+  $(".menu-close").on("click", function () {
+    $(".menu-open").css("display", "flex");
+    $(".principal-menu").css("display", "none");
+    $(".menu-close").css("display", "none");
+    $("#main").removeClass("main");
+  });
 
- /*---------------Show password--------*/
+  /*---------------Show password--------*/
   $(".yes").on("click", function () {
     $("#txtPassword").attr("type", "password");
     $(".no").removeClass("d-none");
@@ -39,7 +38,7 @@ $(".menu-close").on('click',function(){
   $(".no").on("click", function () {
     $("#txtPassword").removeAttr("type");
     $(".yes").removeClass("d-none");
-    $(".yes").css("color","#000");
+    $(".yes").css("color", "#000");
     $(".no").addClass("d-none");
   });
 
@@ -54,7 +53,12 @@ $(".menu-close").on('click',function(){
     $(".register").addClass("d-none");
     $(".login").removeClass("d-none");
   });
+
+ 
+
 });
+
+
 
 
 function validarEmail() {
@@ -75,14 +79,14 @@ function validarEmail() {
   }
 }
 
-  /*-------------Show modal login----------*/
-function openLogin(){
+/*-------------Show modal login----------*/
+function openLogin() {
   $(".modal-login").removeClass(" fadeOutUpBig");
-  $(".background-modal").css("display","flex");
+  $(".background-modal").css("display", "flex");
   $(".modal-login").addClass("animated fadeInDownBig");
 }
 
-function closeModal(){
-  // $(".modal-login").addClass("animated fadeOutUpBig");
-$(".background-modal").css("display","none");
+function closeModal() {
+  $(".background-modal").css("display", "none");
 }
+

@@ -195,64 +195,6 @@
     background-color: #fff;
     color: #000;
   }
-  @media (max-width: 1200px) {
-    .li-sub-items {
-      width: calc(100% / 3);
-    }
-  }
-  @media (max-width: 851px) {
-    .item-li {
-      text-align: center;
-    }
-    .li-sub-items {
-      width: calc(100% / 2);
-    }
-  }
-
-  @media (min-width: 767px) and (max-width: 769px) {
-    .menu-icons a {
-      margin-right: 40px;
-    }
-  }
-  @media (max-width: 992px) {
-    [class*="menu-"] span {
-      font-size: 10px;
-    }
-    .logo-letras {
-      display: none;
-    }
-  }
-  @media (max-width: 768px) {
-    .search-header {
-      display: none;
-    }
-    .logo-header {
-      justify-content: space-around;
-    }
-    .menu {
-      display: none;
-    }
-    .menum {
-      display: flex;
-      margin-left: 15px;
-    }
-
-    .languages-link {
-      display: none;
-    }
-    .menu-languages {
-      display: none;
-    }
-    .menu-search {
-      display: flex;
-    }
-    .menu-icons {
-      justify-content: space-around;
-    }
-  }
-
-  @media (max-width: 576px) {
-  }
 
   #main {
     width: 100%;
@@ -496,3 +438,67 @@
 #btnIngresar:hover::after {
   width: 100%;
 }
+
+
+/*-------- Responsive Desing------------------*/
+  @media (max-width: 1200px) {
+    .li-sub-items {
+      width: calc(100% / 3);
+    }
+  }
+  @media (max-width: 851px) {
+    .item-li {
+      text-align: center;
+    }
+    .li-sub-items {
+      width: calc(100% / 2);
+    }
+  }
+
+  @media (min-width: 767px) and (max-width: 769px) {
+    .menu-icons a {
+      margin-right: 40px;
+    }
+  }
+  @media (max-width: 992px) {
+    [class*="menu-"] span {
+      font-size: 10px;
+    }
+    .logo-letras {
+      display: none;
+    }
+    .login {
+        width: 70%;
+    }
+  }
+  @media (max-width: 768px) {
+    .search-header {
+      display: none;
+    }
+    .logo-header {
+      justify-content: space-around;
+    }
+    .menu {
+      display: none;
+    }
+    .menum {
+      display: flex;
+      margin-left: 15px;
+    }
+
+    .languages-link {
+      display: none;
+    }
+    .menu-languages {
+      display: none;
+    }
+    .menu-search {
+      display: flex;
+    }
+    .menu-icons {
+      justify-content: space-around;
+    }
+  }
+
+  @media (max-width: 576px) {
+  }
