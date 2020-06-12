@@ -11,6 +11,26 @@
 // }
 
 $(document).ready(function () {
+
+  /*----------- Menu mobile------------*/
+  new Mmenu(document.querySelector('#menu'));
+
+  /*----------------Menu normal------------*/
+  $(".menu-open").on('click',function(){
+    $(".menu-close").css("display","flex");
+    $(".principal-menu").css("display","block");
+    $("#main").addClass("main");
+   $(".menu-open").css("display","none");
+})
+
+$(".menu-close").on('click',function(){
+    $(".menu-open").css("display","flex");
+    $(".principal-menu").css("display","none");
+    $(".menu-close").css("display","none");
+    $("#main").removeClass("main")
+ })
+
+ /*---------------Show password--------*/
   $(".yes").on("click", function () {
     $("#txtPassword").attr("type", "password");
     $(".no").removeClass("d-none");
@@ -23,6 +43,7 @@ $(document).ready(function () {
     $(".no").addClass("d-none");
   });
 
+  /*-------------Show login or register----------*/
   $(".register-show").on("click", function () {
     $(".panel-show").removeClass("right-panel");
     $(".register").removeClass("d-none");
@@ -52,4 +73,16 @@ function validarEmail() {
     feedback.style.display = "block";
     feedback.className = "animated bounceInRight";
   }
+}
+
+  /*-------------Show modal login----------*/
+function openLogin(){
+  $(".modal-login").removeClass(" fadeOutUpBig");
+  $(".background-modal").css("display","flex");
+  $(".modal-login").addClass("animated fadeInDownBig");
+}
+
+function closeModal(){
+  // $(".modal-login").addClass("animated fadeOutUpBig");
+$(".background-modal").css("display","none");
 }
