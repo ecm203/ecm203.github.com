@@ -10,44 +10,31 @@
 
 // }
 
-
-$(document).ready(function(){
-
-  $(".yes").on('click',function(){
-      $("#txtPassword").removeAttr( "type");
-      $(".no").removeClass("d-none");
-      $(".yes").addClass("d-none");
-      
-     
+$(document).ready(function () {
+  $(".yes").on("click", function () {
+    $("#txtPassword").attr("type", "password");
+    $(".no").removeClass("d-none");
+    $(".yes").addClass("d-none");
   });
-  $(".no").on('click',function(){
-      $("#txtPassword").attr( "type","password");
-      $(".yes").removeClass("d-none");
-      $(".no").addClass("d-none")
-      $(".yes").css('color','#000');
+  $(".no").on("click", function () {
+    $("#txtPassword").removeAttr("type");
+    $(".yes").removeClass("d-none");
+    $(".yes").css("color","#000");
+    $(".no").addClass("d-none");
   });
-      
-  
-  $(".register-show").on('click',function(){
-    
-    $(".panel-show").removeClass("right-panel")
-  $(".register").removeClass("d-none")
-  $(".login").addClass("d-none")
- 
+
+  $(".register-show").on("click", function () {
+    $(".panel-show").removeClass("right-panel");
+    $(".register").removeClass("d-none");
+    $(".login").addClass("d-none");
+  });
+  $(".login-show").on("click", function () {
+    $(".panel-show").addClass("right-panel");
+    $(".register").addClass("d-none");
+    $(".login").removeClass("d-none");
   });
 });
 
-function Izquierda() {
-  $(".panel-show").removeClass("right-panel")
-  $(".register").removeClass("d-none")
-  $(".login").addClass("d-none")
-
-}
-function Derecha() {
-  $(".panel-show").addClass("right-panel")
-  $(".register").addClass("d-none")
-  $(".login").removeClass("d-none")
-}
 
 function validarEmail() {
   var value = document.getElementById("txtEmail").value;
@@ -61,7 +48,7 @@ function validarEmail() {
     feedback.style.display = "none";
   } else {
     // input.className = "animated shake";
-    feedback.textContent = "Formate de email incorrecto ejemplo: nombre@ejemplo.com";
+    feedback.textContent = "Email incorrecto ejemplo: nombre@ejemplo.com";
     feedback.style.display = "block";
     feedback.className = "animated bounceInRight";
   }
