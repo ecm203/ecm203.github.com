@@ -42,23 +42,42 @@ $(document).ready(function () {
     $(".no").addClass("d-none");
   });
 
-  /*-------------Show login or register----------*/
-  $(".register-show").on("click", function () {
-    $(".panel-show").removeClass("right-panel");
-    $(".register").removeClass("d-none");
-    $(".login").addClass("d-none");
-  });
-  $(".login-show").on("click", function () {
-    $(".panel-show").addClass("right-panel");
-    $(".register").addClass("d-none");
-    $(".login").removeClass("d-none");
-  });
-
- 
+  /*---------- Method show infob --------------*/
+  showInfo();
 
 });
 
+/*--------------Show login or register info-----------------*/
+function showInfo(){
+    /*-------------Show login or register----------*/
 
+    if (window.matchMedia('(max-width: 768px)').matches)
+    {
+      $(".register-show").on("click", function () {
+        $(".register").removeClass("d-none");
+        $(".register-info").addClass("d-none");
+        $(".login").addClass("d-none");
+      });
+      $(".login-show").on("click", function () {
+        $(".register").addClass("d-none");
+        $(".register-info").removeClass("d-none");
+        $(".login").removeClass("d-none");
+      });
+    }
+    else{
+      $(".register-show").on("click", function () {
+        $(".panel-show").removeClass("right-panel");
+        $(".register").removeClass("d-none");
+        $(".login").addClass("d-none");
+      });
+      $(".login-show").on("click", function () {
+        $(".panel-show").addClass("right-panel");
+        $(".register").addClass("d-none");
+        $(".login").removeClass("d-none");
+      });
+    
+    }
+}
 
 
 function validarEmail() {

@@ -445,6 +445,9 @@ div.menu-close {
 
   .modal-login {
     width: 80%;
+    -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
   }
 }
 @media (max-width: 851px) {
@@ -506,18 +509,19 @@ div.menu-close {
     width: 100%;
   }
   .panel-show {
-    height: 50%;
+    height: 70%;
     width: 100%;
     top: 50%;
     right: 0;
   }
-  .right-panel {
+
+  .right-panel{
     top: 0;
   }
-  
+
   .login-info,
   .register-info {
-    height: 50%;
+    height: 30%;
     display: flex;
   }
   .tittle-info{
@@ -529,5 +533,8 @@ div.menu-close {
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 390px) {
+  .info{
+    font-size: 11px;
+  }
 }
