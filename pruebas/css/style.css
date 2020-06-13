@@ -506,7 +506,7 @@ div.menu-close {
     width: 100%;
   }
   .panel-show {
-    height: 60%;
+    height: 50%;
     width: 100%;
     top: 50%;
     right: 0;
@@ -514,16 +514,18 @@ div.menu-close {
   .right-panel {
     top: 0;
   }
+  
   .login-info,
   .register-info {
-    height: 100%;
+    height: 50%;
+    display: flex;
   }
   .tittle-info{
     display: none;
   }
   .close-modal {
-    top: 0;
-    right: 1%;
+    top: 3%;
+    right: 5%;
   }
 }
 
