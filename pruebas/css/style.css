@@ -502,9 +502,11 @@ div.menu-close {
 
   .modal-login {
     flex-direction: column-reverse;
+    height: 100vh;
+    width: 100%;
   }
   .panel-show {
-    height: 50%;
+    height: 60%;
     width: 100%;
     top: 50%;
     right: 0;
@@ -515,6 +517,9 @@ div.menu-close {
   .login-info,
   .register-info {
     height: 100%;
+  }
+  .tittle-info{
+    display: none;
   }
   .close-modal {
     top: 0;
