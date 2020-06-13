@@ -221,7 +221,7 @@ div.menu-close {
 .modal-login {
   height: 80vh;
   overflow: hidden;
-  background-color: #d10024;
+  background-color: #000;
   position: relative;
   display: flex;
   flex-direction: row;
@@ -240,6 +240,11 @@ div.menu-close {
 .close-modal:hover {
   color: #000;
   transition: 0.3s all;
+  text-decoration: none;
+}
+
+.close-modal span{
+  font-size : 15px
 }
 .login-info,
 .register-info {
@@ -249,6 +254,7 @@ div.menu-close {
   text-align: center;
   margin: 0 10%;
   color: #fff;
+  border-bottom: 4px solid #d10024;
 }
 .tittle-info {
   font-size: 1.5em;
@@ -266,7 +272,7 @@ div.menu-close {
   font-weight: 500;
   background-color: #fff;
   border: none;
-  color: #d10024;
+  color: #000;
   position: relative;
   outline: none;
   z-index: 0;
@@ -284,7 +290,6 @@ div.menu-close {
   width: 0%;
   height: 100%;
   background-color: #d10024;
-  border: 2px solid #fff;
   transition: 0.3s all;
   text-decoration: none;
 }
