@@ -514,7 +514,7 @@ div.menu-close {
 
   .modal-login {
     flex-direction: column-reverse;
-    height: 100vh;
+    height: 90vh;
     width: 100%;
   }
   .panel-show {
