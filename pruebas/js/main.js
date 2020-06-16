@@ -53,6 +53,7 @@ function showInfo(){
 
     if (window.matchMedia('(max-width: 768px)').matches)
     {
+      $(".panel-show").css("top","0");
       $(".register-show").on("click", function () {
         $(".register").removeClass("d-none");
         $(".register-info").addClass("d-none");
