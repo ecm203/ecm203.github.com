@@ -12,7 +12,7 @@
 
 $(document).ready(function () {
   /*----------- Menu mobile------------*/
-  new Mmenu(document.querySelector("#menu"));
+  new Mmenu(document.querySelector("#menuM"));
 
   /*----------------Menu normal------------*/
   $(".menu-open").on("click", function () {
@@ -100,12 +100,22 @@ function validarEmail() {
 
 /*-------------Show modal login----------*/
 function openLogin() {
-  $(".modal-login").removeClass(" fadeOutUpBig");
-  $(".background-modal").css("display", "flex");
-  $(".modal-login").addClass("animated fadeInDownBig");
+  var x1 = document.getElementById("mLogin");
+  x1.setAttribute("class", "modal-login active-modal");
 }
 
-function closeModal() {
-  $(".background-modal").css("display", "none");
+function closeLogin() {
+  var x1 = document.getElementById("mLogin");
+  x1.setAttribute("class", "disabled-modal");
 }
 
+
+function openMenu() {
+  var x1 = document.getElementById("main-menu");
+  x1.setAttribute("class", "site-menu active");
+}
+
+function closeMenu() {
+  var x1 = document.getElementById("main-menu");
+  x1.setAttribute("class", "site-menu");
+}

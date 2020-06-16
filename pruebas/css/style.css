@@ -1,3 +1,6 @@
+body {
+  font-family: "Open Sans", sans-serif;
+}
 #header {
   background-color: #000;
   padding: 25px 15px 15px 15px;
@@ -25,6 +28,7 @@
   flex-direction: column;
   margin-left: 10px;
   font-size: 20px;
+  font-weight: 600;
   color: #fff;
 }
 
@@ -34,111 +38,7 @@
 .menum {
   display: none;
 }
-.principal-menu {
-  position: absolute;
-  width: 100%;
-  height: 50vh;
-  top: 120%;
-  left: 0;
-  z-index: 100;
-  background-color: #fff;
-  display: none;
-  border-radius: 5px;
-}
-.item-menu {
-  background-color: #c0c0c0;
-  height: 100%;
-  width: 20%;
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-.item-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-}
-.item-li {
-  height: calc(100% / 7);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-.body-menu {
-  height: 100%;
-  width: 400%;
-  position: absolute;
-  top: 0;
-  left: 100%;
-  display: none;
-}
-.item-li:hover {
-  background-color: #000;
-  color: #fff;
-  transition: 0.5s;
-  cursor: pointer;
-
-}
-.item-li:hover .body-menu{
-  display: inline-block;
-  transition: 0.8s;
-}
-
-.sub-items {
-  float: left;
-  width: 60%;
-  height: 100%;
-  padding: 15px 15px;
-}
-.ul-sub-items {
-  width: 100%;
-  height: 100%;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.li-sub-items {
-  width: 25%;
-  text-align: center;
-}
-.li-sub-items a {
-  color: #000;
-}
-.li-sub-items a:hover {
-  color: #d10024;
-  transition: 0.2s all;
-}
-.li-sub-items a::after {
-  content: "";
-  display: block;
-  width: 0%;
-  height: 3px;
-  background-color: #d10024;
-  -webkit-transition: 0.2s all;
-  transition: 0.2s all;
-  margin-top: 5px;
-}
-.li-sub-items a:hover::after {
-  width: 100%;
-}
-.img-menu {
-  float: right;
-  width: 40%;
-  height: 100%;
-}
-.img-menu img {
-  height: 100%;
-}
-div.menu-close {
-  display: none;
-}
 .search-header {
   border-radius: 50px;
   background-color: #fff;
@@ -197,7 +97,61 @@ div.menu-close {
   background-color: #fff;
   color: #000;
 }
+/*-------------- Main Menu-----------------*/
+.items-links {
+  border-top: 2px solid rgb(54, 53, 53);
+  margin-top: 2%;
+  padding-top: 10px;
+  display: flex;
+  font-weight: 400;
+}
+.menu {
+  color: #fff;
+  margin-right: 20px;
+  cursor: pointer;
+  font-weight: 300;
+}
+.menu i {
+  margin-left: 5px;
+}
+.ul-menu {
+  margin: 0 0 0 5%;
+  padding: 0;
+  display: flex;
+  list-style: none;
+}
+.li-menu {
+  margin-right: 20px;
+  cursor: pointer;
+}
 
+.li-menu a {
+  color: #fff;
+}
+
+.li-menu a::after {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 2px;
+  background-color: #fff;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
+
+.li-menu a:hover::after {
+  width: 100%;
+}
+.li-menu a:hover {
+  text-decoration: none;
+}
+.active-link a::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+}
 #main {
   width: 100%;
   height: 1000px;
@@ -206,33 +160,76 @@ div.menu-close {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+.site-menu {
+  position: fixed;
+  top: 0;
+  right: 100%;
+  width: 30%;
+  height: 100vh;
+  background-color: #000;
+  z-index: 10000;
+  transition: 0.3s ease-in-out;
+}
+
+.site-menu-overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  bottom: 0;
+  z-index: 997;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  visibility: hidden;
+  transition: opacity 0.5ms ease, visibility 0s ease;
+}
+.active {
+  right: 70%;
+}
+.site-menu.active + .site-menu-overlay {
+  visibility: visible;
+  opacity: 1;
+}
+
 /*------------- Modal Login-------------*/
 
-.background-modal {
-  width: 100%;
-  height: 100%;
+.login-overlay {
   background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
   top: 0;
   left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 100vw;
+  height: 100vh;
   transition: 0.1s all;
-  display: none;
-  z-index: 1000;
+  z-index: 100;
+  visibility: hidden;
 }
+
 .modal-login {
-  height: 80vh;
+  position: fixed;
+  top: 15vh;
+  bottom: 15vh;
+  left: 15vw;
+  right: 15vw;
+  height: 70vh;
   overflow: hidden;
   background-color: #000;
-  position: relative;
   display: flex;
   flex-direction: row;
   -webkit-box-shadow: 8px 16px 35px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 8px 16px 35px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 8px 16px 35px 0px rgba(0, 0, 0, 0.75);
-  animation-delay: 0.5ms;
+  z-index: 1000;
+}
+.disabled-modal {
+  visibility: hidden;
+}
+.active-modal {
+  visibility: visible;
+}
+.modal-login.active-modal + .login-overlay {
+  visibility: visible;
+  opacity: 1;
 }
 .close-modal {
   position: absolute;
@@ -247,8 +244,8 @@ div.menu-close {
   text-decoration: none;
 }
 
-.close-modal span{
-  font-size : 15px
+.close-modal span {
+  font-size: 15px;
 }
 .login-info,
 .register-info {
@@ -453,10 +450,14 @@ div.menu-close {
   }
 
   .modal-login {
-    width: 80%;
-    -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
+    left: 10vw;
+    right: 10vw;
+    top: 25vh;
+    bottom: 25vh;
+    height: 50vh;
+  }
+    .login {
+    width: 70%;
   }
 }
 @media (max-width: 851px) {
@@ -480,9 +481,6 @@ div.menu-close {
   .logo-letras {
     display: none;
   }
-  .login {
-    width: 70%;
-  }
 }
 @media (max-width: 768px) {
   .search-header {
@@ -492,6 +490,12 @@ div.menu-close {
     justify-content: space-around;
   }
   .menu {
+    display: none;
+  }
+  #main-menu{
+    display: none;
+  }
+  .items-links {
     display: none;
   }
   .menum {
@@ -513,9 +517,11 @@ div.menu-close {
   }
 
   .modal-login {
+    top: 5vh;
+    left: 10%;
     flex-direction: column-reverse;
     height: 90vh;
-    width: 100%;
+    width: 80%;
   }
   .panel-show {
     height: 70%;
@@ -524,7 +530,7 @@ div.menu-close {
     right: 0;
   }
 
-  .right-panel{
+  .right-panel {
     top: 0;
   }
 
@@ -533,7 +539,7 @@ div.menu-close {
     height: 30%;
     display: flex;
   }
-  .tittle-info{
+  .tittle-info {
     display: none;
   }
   .close-modal {
@@ -543,7 +549,7 @@ div.menu-close {
 }
 
 @media (max-width: 390px) {
-  .info{
+  .info {
     font-size: 11px;
   }
 }
