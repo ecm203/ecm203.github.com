@@ -517,11 +517,11 @@ body {
   }
 
   .modal-login {
-    top: 5vh;
-    left: 10%;
+    top: 15vh;
+    left: 15%;
     flex-direction: column-reverse;
-    height: 90vh;
-    width: 80%;
+    height: 70vh;
+    width: 70%;
   }
   .panel-show {
     height: 70%;
