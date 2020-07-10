@@ -1,0 +1,76 @@
+
+.top-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 20px;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+}
+
+.menu-mobile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 15px;
+}
+
+.main-menu ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+}
+
+.main-menu ul li{
+    padding-right: 40px;
+   
+}
+
+.main-menu ul li a{
+    color: #3d3d3d;
+}
+
+.indicator{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3d3d3d;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+
+#btnAddCita{
+    border: none;
+    outline: none;
+    background-color: rgb(6, 6, 255);
+    color: #fff;
+    border-radius: 25px;
+    padding: 5px 30px;
+}
+
+.slider{
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.carousel{
+    height: 100%;
+}
+.carousel-item{
+    height: 100%;
+}
+.carousel-item img{
+    opacity: .7;
+}
+
+.carousel-indicators li{
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+}

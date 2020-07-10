@@ -221,9 +221,9 @@ body {
   box-shadow: 8px 16px 35px 0px rgba(0, 0, 0, 0.75);
   z-index: 1000;
   animation-name: fadeInDownBig;
-  animation-duration: .5s;
+  animation-duration: 0.5s;
 }
-.disabled-modal{  
+.disabled-modal {
   display: none;
 }
 .active-modal {
@@ -331,10 +331,30 @@ body {
   text-align: center;
 }
 
+.loader {
+  border: 5px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 5px solid #000;
+  border-right: 5px solid #000;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+  display: none;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .right-panel {
   right: 0;
 }
-
+.center-panel {
+  right: 25%;
+}
 #input-div {
   margin-top: 40px;
   display: flex;
@@ -458,7 +478,7 @@ body {
     bottom: 25vh;
     height: 50vh;
   }
-    .login {
+  .login {
     width: 70%;
   }
 }
@@ -494,7 +514,7 @@ body {
   .menu {
     display: none;
   }
-  #main-menu{
+  #main-menu {
     display: none;
   }
   .items-links {

@@ -120,3 +120,12 @@ function closeMenu() {
   var x1 = document.getElementById("main-menu");
   x1.setAttribute("class", "site-menu");
 }
+
+
+function login(){
+  $(".panel-show").addClass("center-panel");
+  $(".login").css("display","none");
+  $(".login-info").css("display","none");
+  $(".register-info").css("display","none");
+  $(".loader").css("display","block");
+}
