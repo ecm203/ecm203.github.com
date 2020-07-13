@@ -445,13 +445,11 @@ h3 {
   .txt-subs{
       width: 50%;
   }
-  .claim-fotter {
+  .claim-fotter{
+    display: flex;
+    justify-content: center;
     padding-top: 0 !important;
-  }
-
-  .claims {
-    display: inline-block;
-  }
+ }
   .icon {
     flex-direction: column;
   }
@@ -481,27 +479,25 @@ h3 {
     [class*="user-"] i {
         font-size: 1.5em;
     }
+    [class*="user-"]{
+      font-size: 13px;
+    }
     /*footer*/
-    .tittle-f{
+    /* .tittle-f{
         font-size: 15px;
     }
     .itemsFotter{
         font-size: 15px;
     }
-    .claim-fotter{
-       display: flex;
-       justify-content: center;
-    }
     .book h3{
         font-size: 15px;
-    }
+    } */
     [class*="-icon"] h3{
         text-align: center;
     }
     .icons {
         margin-left: 10px;
-        font-size: 25px;
-        color: var(--fifth-color);
+        font-size: 35px;
       }
       .icons i {
         margin-right: 10px;

@@ -49,27 +49,27 @@
                     </div>
 
                     <div class="d-flex align-items-end">
-                        <div class="user-menu ml-sm-5 ml-3 d-lg-none d-flex">
+                        <div class="user-menu d-lg-none d-flex">
                             <i class="icon-menu"></i>
                             <span>Menú</span>
                         </div>
-                        <div class="user-search ml-sm-5 ml-3 d-lg-none d-flex">
+                        <div class="user-search ml-sm-4 ml-3 d-lg-none d-flex">
                             <i class="icon-search"></i>
                             <span> Buscar </span>
                         </div>
-                        <a href="#" class="ml-sm-5 ml-3 d-lg-flex d-none">
+                        <a href="#" class="ml-sm-4 d-lg-flex d-none">
                             <div class="user-orders">
                                 <i class="icon-truck"></i>
                                 <span> Mis Pedidos</span>
                             </div>
                         </a>
-                        <a href="#" class="ml-sm-5 ml-3">
+                        <a href="#" class="ml-sm-4 ml-3">
                             <div class="user-favorites">
                                 <i class="icon-heart"></i>
                                 <span> Favoritos </span>
                             </div>
                         </a>
-                        <div class="user-cart ml-sm-5 ml-3">
+                        <div class="user-cart ml-sm-4 ml-3">
                             <i class="icon-supermarket"></i>
                             <span> Carrito </span>
                             <span class="itemCart"> 1</span>
@@ -115,7 +115,7 @@
         </div>
     </div>
     <div class="main" style="margin-top: 100px;">
-        
+
     </div>
     <div class="footer">
         <div class="container-fluid topf p-sm-5 p-4">
@@ -167,12 +167,14 @@
                         </ul>
                     </div>
                 </div>
-                <div  class="about-fotter pl-lg-4" >
-                    <div class="tittleDiv">
-                        <h3 class="tittle-f">Sobre nosotros</h3>
-                        <i class="d-lg-none d-inline icon-next"></i>
-                    </div>
-                    <div class="itemsFotter">
+                <div class="about-fotter dropdown pl-lg-4">
+                    <a href="#" data-toggle="dropdown">
+                        <div class="tittleDiv">
+                            <h3 class="tittle-f">Sobre nosotros</h3>
+                            <i class="d-lg-none d-inline icon-next"></i>
+                        </div>
+                    </a>
+                    <div class="itemsFotter dropdown-menu">
                         <ul>
                             <li class="item-f">
                                 <a href="#">
@@ -202,12 +204,14 @@
                         </ul>
                     </div>
                 </div>
-                <div  class="services-fotter pl-lg-4">
-                    <div class="tittleDiv">
-                        <h3 class="tittle-f">Servicio al cliente</h3>
-                        <i class="d-lg-none d-inline icon-next"></i>
-                    </div>
-                    <div class="itemsFotter">
+                <div class="services-fotter dropdown pl-lg-4">
+                    <a href="#" data-toggle="dropdown">
+                        <div class="tittleDiv">
+                            <h3 class="tittle-f">Servicios</h3>
+                            <i class="d-lg-none d-inline icon-next"></i>
+                        </div>
+                    </a>
+                    <div class="itemsFotter dropdown-menu">
                         <ul>
                             <li class="item-f">
                                 <a href="#">
@@ -237,20 +241,23 @@
                         </ul>
                     </div>
                 </div>
-                <div  class="subscribe-fotter pl-lg-4">
+
+                <div class="subscribe-fotter dropdown">
                     <div class="panel-small d-none">
                         <div class="loader loader-small">
 
                         </div>
                     </div>
-                    <div class="subscribe">
-                        <div class="tittleDiv">
-                            <h3 class="tittle-f">¡Recibe nuestras ofertas y Novedades!</h3>
-                            <i class="d-md-none d-inline icon-next"></i>
-                        </div>
+                    <div class="subscribe pl-lg-4">
+                        <a href="#" data-toggle="dropdown">
+                            <div class="tittleDiv">
+                                <h3 class="tittle-f">¡Recibe nuestras ofertas y Novedades!</h3>
+                                <i class="d-md-none d-inline icon-next"></i>
+                            </div>
+                        </a>
                         <span class="subsText">Subscríbete y recibe a tu correo todas nuestras
                             ofertas exclusivas y novedades</span>
-                        <div class="form">
+                        <div class="form dropdown-menu">
                             <input type="text" class="txt-subs pb-2" placeholder="Ingresa tu DNI o Nro. de documento">
                             <input type="text" class="txt-subs pb-2" placeholder="Ingresa tu email">
                             <div class="check">
