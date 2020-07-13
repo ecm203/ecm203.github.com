@@ -1,0 +1,144 @@
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../font/icomoon.eot?f5z0sl');
+    src:  url('../font/icomoon.eot?f5z0sl#iefix') format('embedded-opentype'),
+      url('../font/icomoon.ttf?f5z0sl') format('truetype'),
+      url('../font/icomoon.woff?f5z0sl') format('woff'),
+      url('../font/icomoon.svg?f5z0sl#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-american-express:before {
+    content: "\e900";
+  }
+  .icon-audio:before {
+    content: "\e901";
+  }
+  .icon-blackberry-messenger:before {
+    content: "\e902";
+  }
+  .icon-book:before {
+    content: "\e903";
+  }
+  .icon-chip:before {
+    content: "\e904";
+  }
+  .icon-close:before {
+    content: "\e905";
+  }
+  .icon-computer:before {
+    content: "\e906";
+  }
+  .icon-diners-club:before {
+    content: "\e907";
+  }
+  .icon-ethernet:before {
+    content: "\e908";
+  }
+  .icon-eye:before {
+    content: "\e909";
+  }
+  .icon-facebook:before {
+    content: "\e90a";
+  }
+  .icon-game-controller:before {
+    content: "\e90b";
+  }
+  .icon-growth:before {
+    content: "\e90c";
+  }
+  .icon-heart:before {
+    content: "\e90d";
+  }
+  .icon-instagram:before {
+    content: "\e90e";
+  }
+  .icon-iphone:before {
+    content: "\e90f";
+  }
+  .icon-keyboard:before {
+    content: "\e910";
+  }
+  .icon-magnifying-glass:before {
+    content: "\e911";
+  }
+  .icon-mail:before {
+    content: "\e912";
+  }
+  .icon-master-card:before {
+    content: "\e913";
+  }
+  .icon-menu:before {
+    content: "\e914";
+  }
+  .icon-next:before {
+    content: "\e915";
+  }
+  .icon-phone:before {
+    content: "\e916";
+  }
+  .icon-print:before {
+    content: "\e917";
+  }
+  .icon-real-estate:before {
+    content: "\e918";
+  }
+  .icon-search:before {
+    content: "\e919";
+  }
+  .icon-shop:before {
+    content: "\e91a";
+  }
+  .icon-smart-key:before {
+    content: "\e91b";
+  }
+  .icon-supermarket:before {
+    content: "\e91c";
+  }
+  .icon-supply:before {
+    content: "\e91d";
+  }
+  .icon-tablet:before {
+    content: "\e91e";
+  }
+  .icon-television:before {
+    content: "\e91f";
+  }
+  .icon-tower-pc:before {
+    content: "\e920";
+  }
+  .icon-truck:before {
+    content: "\e921";
+  }
+  .icon-twitter:before {
+    content: "\e922";
+  }
+  .icon-user:before {
+    content: "\e923";
+  }
+  .icon-visa:before {
+    content: "\e924";
+  }
+  .icon-whatsapp:before {
+    content: "\e925";
+  }
+  .icon-youtube:before {
+    content: "\e926";
+  }
