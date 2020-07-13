@@ -436,13 +436,11 @@ h3 {
   .tittle-f {
     font-size: 20px;
   }
-  .itemsFotter {
-    background-color: var(--second-color);
-    border-radius: 5px;
-  }
 
   /* Animation dropdown*/
   .dropdown-menu {
+    background-color: var(--second-color);
+    border-radius: 5px;
     max-height: 0;
     overflow: hidden;
   }
@@ -544,11 +542,6 @@ h3 {
 @media (max-width: 768px) {
   .subscribe .tittleDiv {
     margin-bottom: 0;
-  }
-
-  .form {
-    background-color: var(--second-color);
-    border-radius: 5px;
   }
   .txt-subs {
     width: 100%;
