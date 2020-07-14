@@ -115,10 +115,10 @@ h3 {
   text-align: center;
   max-height: 600px;
 }
-.disabled-login {
+.disabled-modal {
   display: none !important;
 }
-.active-login {
+.active-modal {
   display: block;
 }
 .log-close {
@@ -302,6 +302,17 @@ h3 {
 }
 /* Fin modal login*/
 
+/* Cart Modal  */
+.cart-modal{
+  position: fixed;
+  right: 0;
+  width: 25vw;
+  height: 100vh;
+  background-color: var(--fifth-color);
+  z-index: 1000;
+}
+/* Fin cart Modal */
+
 /* Header*/
 .header {
   font-family: var(--primary-font);
@@ -383,6 +394,7 @@ h3 {
 
 .user-cart {
   position: relative;
+  cursor: pointer;
 }
 .cart-item {
   position: absolute;
@@ -856,8 +868,13 @@ h3 {
     text-align: center;
   }
 }
-
-@media (max-height: 700px){
+@media  (max-height: 850px) and (max-width: 400px){
+  .login-modal {
+    left: 0;
+    width: 100vw;
+  }
+}
+@media  (max-height: 700px) and (max-width: 400px){
   .login-modal {
   top: 0;
   left: 0;

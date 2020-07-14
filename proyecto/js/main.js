@@ -1,4 +1,5 @@
 // Dropdown Menu
+
 if (screen.width <= 992) {
   var dropdown = document.querySelectorAll(".dropdown");
   var dropdownArray = Array.prototype.slice.call(dropdown, 0);
@@ -52,10 +53,9 @@ const animateCSS = (element, animation, prefix = "animate__") =>
     node.addEventListener("animationend", handleAnimationEnd);
   });
 
-/* Open login*/
-function openLogin() {
+/*Open Background*/
+function openBackground() {
   let background = document.querySelector(".background-overlay");
-  let modal = document.querySelector(".login-modal");
 
   background.classList.remove(
     "disabled-background",
@@ -68,24 +68,9 @@ function openLogin() {
     "animate__fadeIn",
     "animate__faster"
   );
-
-  modal.classList.remove(
-    "disabled-login",
-    "animate__animated",
-    "animate__fadeInDownBig"
-  );
-  modal.classList.add(
-    "active-login",
-    "animate__animated",
-    "animate__fadeInDownBig",
-    "animate__faster"
-  );
 }
-
-/*Cerrar login*/ 
-function closeModal() {
+function closeBackground() {
   let background = document.querySelector(".background-overlay");
-  let modal = document.querySelector(".login-modal");
 
   animateCSS(".background-overlay", "fadeOut").then((message) => {
     // Do something after the animation
@@ -96,18 +81,63 @@ function closeModal() {
     );
     background.classList.add("disabled-background");
   });
+}
 
-  animateCSS(".login-modal", "fadeOutUpBig").then((message) => {
+/*Open Modal*/
+
+function openModal(element, animation, prefix = "animate__") {
+  const modal = document.querySelector(element);
+
+  openBackground();
+
+  modal.classList.remove(
+    "disabled-modal",
+    `${prefix}animated`,
+    `${prefix}${animation}`
+  );
+
+  modal.classList.add(
+    "active-modal",
+    `${prefix}animated`,
+    `${prefix}${animation}`,
+    `${prefix}faster`
+  );
+}
+
+/* Open login*/
+function openLogin() {
+  openModal(".login-modal", "backInDown");
+}
+
+/*Cerrar modal*/
+function closeModal(element, animation, prefix = "animate__") {
+  let modal = document.querySelector(element);
+
+  closeBackground();
+
+  animateCSS(element, animation).then((message) => {
     // Do something after the animation
     modal.classList.remove(
-      "active-login",
-      "animate__animated",
-      "animate__fadeInDownBig"
+      "active-modal",
+      `${prefix}animated`,
+      `${prefix}${animation}`
     );
-    modal.classList.add(
-      "disabled-login"
-    );
+    modal.classList.add("disabled-modal");
   });
+}
+
+/*Verificar quien esta active*/
+function validaModal() {
+  const modal1 = document.querySelector(".login-modal");
+  const modal2 = document.querySelector(".cart-modal");
+  let prueba1 = modal1.classList.contains("active-modal");
+  let prueba2 = modal2.classList.contains("active-modal");
+  if (prueba1 == true) {
+    closeModal(".login-modal", "backOutUp");
+  }
+  if (prueba2 == true) {
+    closeModal(".cart-modal", "slideOutRight");
+  }
 }
 
 /*Validar email*/
@@ -125,26 +155,29 @@ function validarEmail() {
     // input.className = "animated shake";
     feedback.textContent = "Email incorrecto ejemplo: nombre@ejemplo.com";
     feedback.style.display = "block";
-    feedback.classList.add("animate__animated","animate__bounceIn");
+    feedback.classList.add("animate__animated", "animate__bounceIn");
   }
 }
 
+/*Mostrar contraseña*/
+const yes = document.querySelector(".yes");
+const no = document.querySelector(".no");
+const txt = document.getElementById("txtPassword");
 
+yes.onclick = function (event) {
+  txt.setAttribute("type", "text");
+  yes.classList.add("d-none");
+  no.classList.remove("d-none");
+  no.style.color = "#000";
+};
 
-  /*Mostrar contraseña*/
-  const yes = document.querySelector(".yes");
-  const no = document.querySelector(".no");
-  const txt = document.getElementById("txtPassword");
-  
-  yes.onclick = function (event) {
-    txt.setAttribute("type","text");
-    yes.classList.add("d-none");
-    no.classList.remove("d-none");
-    no.style.color = "#000";
-  };
+no.onclick = function (event) {
+  txt.setAttribute("type", "password");
+  no.classList.add("d-none");
+  yes.classList.remove("d-none");
+};
 
-  no.onclick = function (event) {
-    txt.setAttribute("type","password");
-    no.classList.add("d-none");
-    yes.classList.remove("d-none");
-  };
+/*Open Cart*/
+function openCart() {
+  openModal(".cart-modal", "slideInRight");
+}

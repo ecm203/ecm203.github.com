@@ -37,19 +37,19 @@
     <!-- End Scroll to top -->
 
     <!-- Background overlay -->
-    <div class="background-overlay disabled-background" onclick="closeModal()">
+    <div class="background-overlay disabled-background" onclick="validaModal()">
 
     </div>
     <!-- End background overlay -->
 
     <!-- Login modal -->
-    <div class="login-modal disabled-login">
+    <div class="login-modal disabled-modal">
         <div class="panel-small d-none">
             <div class="loader loader-small">
 
             </div>
         </div>
-        <div class="log-close" onclick="closeModal()">
+        <div class="log-close" onclick="validaModal()">
             <i class="icon-close"></i>
         </div>
         <div class="log-tittle">
@@ -87,6 +87,12 @@
     </div>
     </div>
     <!-- End Login modal -->
+
+    <!-- Cart Modal -->
+    <div class="cart-modal disabled-modal">
+
+    </div>
+    <!-- End cart Modal -->
 
     <!-- Header-->
     <header class="header">
@@ -137,7 +143,7 @@
                             <span> Favoritos </span>
                         </div>
                     </a>
-                    <div class="user-cart ml-sm-4 ml-3">
+                    <div class="user-cart ml-sm-4 ml-3" onclick="openCart()">
                         <i class="icon-supermarket"></i>
                         <span> Carrito </span>
                         <span class="cart-item"> 1</span>
