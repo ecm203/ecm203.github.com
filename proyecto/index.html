@@ -81,8 +81,9 @@
                 <button class="btn-login" id="btnLogin">Ingresar</button>
             </div>
             <div class="other-way">ó</div>
-            <button class="btn-login-facebook" id="btnLoginFacebook"><i class="icon-facebook"></i>  Ingresa con facebook</button>
-            <span class="register-info">¿No tienes cuenta? <a class="register-link"href="#">Registrate</a></span>
+            <button class="btn-login-facebook" id="btnLoginFacebook"><i class="icon-facebook"></i> Ingresa con
+                facebook</button>
+            <span class="register-info">¿No tienes cuenta? <a class="register-link" href="#">Registrate</a></span>
         </div>
     </div>
     </div>
@@ -90,7 +91,64 @@
 
     <!-- Cart Modal -->
     <div class="cart-modal disabled-modal">
+        <div class="header-cart">
+            <div class="items-cr">
+                <span class="tittle-cr">
+                    Carrito <br>
+                    de compras
+                </span>
+                <span class="number-cr">0</span>
+            </div>
+            <a href="#" class="close-cr" onclick="validaModal()">Cerrar</a>
+        </div>
+        <div class="body-cart">
+            <ul class="items-cr-pro">
+                <li class="producto-cr">
+                    <a href="#" class="remove-pro">
+                        <i class="icon-close"></i>
+                    </a>
+                    <a class="link-pr-cr" href="#">
+                        <img class="img-pro" src="img/product/intel.jpg" alt="Producto">
+                        <div class="info-pro">
+                            <span class="name-pro">Intel i5 10600 2ghz</span>
+                            <span class="sku-pro">12346578</span>
+                        </div>
+                    </a>
+                    <div class="info-pro">
+                        <span class="quantity-pro">10</span>
+                        <span class="price-pro">1700</span>
+                    </div>
+                </li>
+                <li class="producto-cr">
+                    <a href="#" class="remove-pro">
+                        <i class="icon-close"></i>
+                    </a>
+                    <a class="link-pr-cr" href="#">
+                        <img class="img-pro" src="img/product/intel.jpg" alt="Producto">
+                        <div class="info-pro">
+                            <span class="name-pro">Intel i5 10600 2ghz</span>
+                            <span class="sku-pro">12346578</span>
+                        </div>
+                    </a>
+                    <div class="info-pro">
+                        <span class="quantity-pro">10</span>
+                        <span class="price-pro">1700</span>
+                    </div>
+                </li>
+                
+            </ul>
 
+            <!-- <div class="empty-cr">
+                <p>
+                    Tu carrito de compras está vacio. <br>
+                    Agrega productos ahora
+                </p>
+                <a href="#" class="buy-cr">Seguir comprando</a>
+            </div> -->
+        </div>
+        <div class="fotter-cart">
+            <a href="#" class="btn-primary">Ver carrito</a>
+        </div>
     </div>
     <!-- End cart Modal -->
 
