@@ -5,125 +5,190 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
-    <link rel="stylesheet" href="css/icons.css">
-    <link rel="stylesheet" href="css/style.css">
+    <!-- Google fonts css -->
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Oswald:wght@200;300;400;500;600;700&display=swap"
         rel="stylesheet">
+    <!-- Normalizador css -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- Grid de bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <!-- Fuentes de iconos css -->
+    <link rel="stylesheet" href="css/icons.css">
+    <!-- Animaciones css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
+    <!-- Estilos principales -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <!-- <div class="panel">
+    <!-- Loading page -->
+    <div class="panel d-none">
         <div class="loader">
-            
-        </div>
-    </div> -->
-    <div class="header">
-        <div class="container-fluid">
-            <div class="row top py-lg-4 px-lg-5 p-4">
-                <div class="left">
-                    <a href="#" class="logoLink d-md-block d-none">
-                        Coseinco
-                    </a>
-                    <a href="#" class="logoLink d-md-none d-block">
-                        C
-                    </a>
-                </div>
-                <div class="center d-lg-block d-none ">
-                    <div class="search-menu">
-                        <input type="text" placeholder="¿Que estás buscando?">
-                        <button>
-                            <i class="icon-search"></i>
-                        </button>
-                    </div>
-                </div>
-                <div class="right d-flex justify-lg-content-center justify-content-end">
-                    <div class="user d-lg-flex d-none">
-                        <i class="icon-user"></i>
-                        <div class="welcome">
-                            <span class="welcomeText">Iniciar Sesión</span>
-                            <span class="userName">Bienvenid@</span>
-                        </div>
-                    </div>
-
-                    <div class="d-flex align-items-end">
-                        <div class="user-menu d-lg-none d-flex">
-                            <i class="icon-menu"></i>
-                            <span>Menú</span>
-                        </div>
-                        <div class="user-search ml-sm-4 ml-3 d-lg-none d-flex">
-                            <i class="icon-search"></i>
-                            <span> Buscar </span>
-                        </div>
-                        <a href="#" class="ml-sm-4 d-lg-flex d-none">
-                            <div class="user-orders">
-                                <i class="icon-truck"></i>
-                                <span> Mis Pedidos</span>
-                            </div>
-                        </a>
-                        <a href="#" class="ml-sm-4 ml-3">
-                            <div class="user-favorites">
-                                <i class="icon-heart"></i>
-                                <span> Favoritos </span>
-                            </div>
-                        </a>
-                        <div class="user-cart ml-sm-4 ml-3">
-                            <i class="icon-supermarket"></i>
-                            <span> Carrito </span>
-                            <span class="itemCart"> 1</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row bottom">
-                <div class="col-12 px-5 py-3 d-lg-flex align-items-center d-none">
-                    <div class="menu">
-                        <i class="icon-menu"></i>
-                        <span class="menuText">MENÚ</span>
-                    </div>
-                    <div class="menuLinks">
-                        <ul class="ul-link">
-                            <li class="item-link">
-                                <a href="#">
-                                    Novedades
-                                </a>
-                            </li>
-                            <li class="item-link">
-                                <a href="#">
-                                    Más Vendidos
-                                </a>
-                            </li>
-                            <li class="item-link">
-                                <a href="#">
-                                    Promociones
-                                </a>
-                            </li>
-                            <li class="item-link">
-                                <a href="#">
-                                    Exclusivos
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="scroll">
 
         </div>
     </div>
+    <!-- End loading page -->
+
+    <!-- Scroll to top -->
+    <div class="scroll-to-top">
+        <i class="icon-next"></i>
+    </div>
+    <!-- End Scroll to top -->
+
+    <!-- Background overlay -->
+    <div class="background-overlay disabled-background" onclick="closeModal()">
+
+    </div>
+    <!-- End background overlay -->
+
+    <!-- Login modal -->
+    <div class="login-modal disabled-login">
+        <div class="panel-small d-none">
+            <div class="loader loader-small">
+
+            </div>
+        </div>
+        <div class="log-close" onclick="closeModal()">
+            <i class="icon-close"></i>
+        </div>
+        <div class="log-tittle">
+            <span class="tittle-l">Iniciar sesión</span>
+        </div>
+        <div class="form">
+            <div class="input-div">
+                <i class="icon-mail"></i>
+                <input type="text" required onchange="validarEmail()" spellcheck="false" autocomplete="off"
+                    id="txtEmail">
+                <label class="lblLabel" tittle="Ingrese su email" for="txtEmail"></label>
+                <span class="input-feedback">Ingrese un dni válido</span>
+            </div>
+            <div class="input-div">
+                <i class="icon-smart-key"></i>
+                <input type="password" required autocomplete="off" id="txtPassword">
+                <label class="lblContraseña" tittle="Ingrese su contraseña" for="txtPassword"></label>
+                <a class="yes">
+                    <i class="icon-eye"></i>
+                </a>
+                <a class="no d-none">
+                    <i class="icon-youtube"></i>
+                </a>
+                <span class="input-feedback">Campo requerido</span>
+                <span class="validate-login">Email o contraseña incorrecto</span>
+            </div>
+            <div class="div-log">
+                <a class="forget-link" href="#"> ¿Olvidaste tu contraseña? </a>
+                <button class="btn-login" id="btnLogin">Ingresar</button>
+            </div>
+            <div class="other-way">ó</div>
+            <button class="btn-login-facebook" id="btnLoginFacebook"><i class="icon-facebook"></i>  Ingresa con facebook</button>
+            <span class="register-info">¿No tienes cuenta? <a class="register-link"href="#">Registrate</a></span>
+        </div>
+    </div>
+    </div>
+    <!-- End Login modal -->
+
+    <!-- Header-->
+    <header class="header">
+        <div class="hd-top py-4 px-lg-5 px-4">
+            <div class="hdt-left d-flex justify-content-xl-center justify-content-start">
+                <a href="#" class="logo-link d-md-block d-none">
+                    Coseinco
+                </a>
+                <a href="#" class="logo-link d-md-none d-block">
+                    C
+                </a>
+            </div>
+            <div class="hdt-center d-lg-block d-none ">
+                <div class="search-menu">
+                    <input type="text" placeholder="¿Que estás buscando?">
+                    <button>
+                        <i class="icon-search"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="hdt-right d-flex justify-content-lg-center justify-content-end">
+                <div class="welcome-user d-lg-flex d-none" onclick="openLogin()">
+                    <i class="icon-user"></i>
+                    <div class="welcome">
+                        <span class="welcome-text">Iniciar Sesión</span>
+                        <span class="user-name">Bienvenid@</span>
+                    </div>
+                </div>
+
+                <div class="d-flex align-items-end">
+                    <div class="user-menu d-lg-none d-flex">
+                        <i class="icon-menu"></i>
+                        <span>Menú</span>
+                    </div>
+                    <div class="user-search ml-sm-4 ml-3 d-lg-none d-flex">
+                        <i class="icon-search"></i>
+                        <span> Buscar </span>
+                    </div>
+                    <a href="#" class="ml-sm-4 d-lg-flex d-none">
+                        <div class="user-orders">
+                            <i class="icon-truck"></i>
+                            <span> Mis Pedidos</span>
+                        </div>
+                    </a>
+                    <a href="#" class="ml-sm-4 ml-3">
+                        <div class="user-favorites">
+                            <i class="icon-heart"></i>
+                            <span> Favoritos </span>
+                        </div>
+                    </a>
+                    <div class="user-cart ml-sm-4 ml-3">
+                        <i class="icon-supermarket"></i>
+                        <span> Carrito </span>
+                        <span class="cart-item"> 1</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hd-bottom px-5 py-3 d-lg-flex align-items-center d-none">
+            <div class="menu">
+                <i class="icon-menu"></i>
+                <span class="menu-text">MENÚ</span>
+            </div>
+            <nav class="menu-nav">
+                <ul class="ul-nav">
+                    <li class="item-nav">
+                        <a href="#">
+                            Novedades
+                        </a>
+                    </li>
+                    <li class="item-nav">
+                        <a href="#">
+                            Más Vendidos
+                        </a>
+                    </li>
+                    <li class="item-nav">
+                        <a href="#">
+                            Promociones
+                        </a>
+                    </li>
+                    <li class="item-nav">
+                        <a href="#">
+                            Exclusivos
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- End header-->
+
     <div class="main" style="margin-top: 100px;">
 
     </div>
-    <div class="footer">
-        <div class="topf p-sm-5 p-4">
-            <div class="row px-3">
+
+    <!-- Footer-->
+    <footer>
+        <div class="ft-top p-sm-5 p-4">
+            <div class="ft-row pb-sm-5 pb-4">
                 <div class="contact-fotter dropdown">
                     <a href="#" data-toggle="dropdown">
-                        <div class="tittleDiv">
+                        <div class="ft-tittle">
                             <h3 class="tittle-f">Contáctanos</h3>
                             <i class="d-lg-none d-inline icon-next"></i>
                         </div>
@@ -165,12 +230,22 @@
                                     </a>
                                 </div>
                             </li>
+                            <li>
+                                <div class="ft-book">
+                                    <a href="#">
+                                        <div class="book">
+                                            <i class="icon-book"></i>
+                                            <h3>Libro de Reclamaciones</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
                         </ul>
                     </div>
                 </div>
-                <div class="about-fotter dropdown pl-lg-4">
+                <div class="about-fotter dropdown">
                     <a href="#" data-toggle="dropdown">
-                        <div class="tittleDiv">
+                        <div class="ft-tittle">
                             <h3 class="tittle-f">Sobre nosotros</h3>
                             <i class="d-lg-none d-inline icon-next"></i>
                         </div>
@@ -205,9 +280,9 @@
                         </ul>
                     </div>
                 </div>
-                <div class="services-fotter dropdown pl-lg-4">
+                <div class="services-fotter dropdown">
                     <a href="#" data-toggle="dropdown">
-                        <div class="tittleDiv">
+                        <div class="ft-tittle">
                             <h3 class="tittle-f">Servicios</h3>
                             <i class="d-lg-none d-inline icon-next"></i>
                         </div>
@@ -242,8 +317,7 @@
                         </ul>
                     </div>
                 </div>
-
-                <div class="subscribe-fotter dropdown pl-lg-4">
+                <div class="subscribe-fotter dropdown">
                     <div class="panel-small d-none">
                         <div class="loader loader-small">
 
@@ -251,13 +325,13 @@
                     </div>
                     <div class="subscribe">
                         <a href="#" data-toggle="dropdown">
-                            <div class="tittleDiv">
+                            <div class="ft-tittle">
                                 <h3 class="tittle-f">¡Recibe nuestras ofertas y Novedades!</h3>
                                 <i class="d-lg-none d-inline icon-next"></i>
                             </div>
                         </a>
                         <div class="dropdown-menu">
-                            <span class="subsText">Subscríbete y recibe a tu correo todas nuestras
+                            <span class="subs-text">Subscríbete y recibe a tu correo todas nuestras
                                 ofertas exclusivas y novedades</span>
                             <input type="text" class="txt-subs pb-2" placeholder="Ingresa tu DNI o Nro. de documento">
                             <input type="text" class="txt-subs pb-2" placeholder="Ingresa tu email">
@@ -268,28 +342,16 @@
                                 </label>
                                 <a href="#">Acepto la política de datos personales</a>
                             </div>
-                            <button class="btn-Sub">SUSCRIBIRME</button>
+                            <button class="btn-sub">SUSCRIBIRME</button>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row px-3 pt-sm-5 pt-4">
-                <div class="claim-fotter">
-                    <div class="claims">
-                        <a href="#">
-                            <div class="book">
-                                <i class="icon-book"></i>
-                                <h3>Libro de Reclamaciones</h3>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="row px-3 pt-sm-5 pt-4">
-                <div class="icon">
+            <div class="ft-row">
+                <div class="ft-media">
                     <div class="social-icon">
-                        <h3>Siguenos en nuestras redes sociales</h3>
-                        <div class="icons">
+                        <h3 class="tittle-f">Siguenos en nuestras redes sociales</h3>
+                        <div class="icons-f">
                             <a href="#">
                                 <i class="icon-facebook"></i>
                             </a>
@@ -306,7 +368,7 @@
                     </div>
                     <div class="payment-icon">
                         <h3 class="tittle-f">Métodos de pago</h3>
-                        <div class="icons">
+                        <div class="icons-f">
                             <i class="icon-american-express"></i>
                             <i class="icon-master-card"></i>
                             <i class="icon-visa"></i>
@@ -317,10 +379,14 @@
 
             </div>
         </div>
-        <div class="bottomf">
+        <div class="ft-bottom p-2">
             <p>COSEINCO S.A.C © Todo los derechos reservados 2020</p>
         </div>
-    </div>
+    </footer>
+    <!-- End footer-->
+
+
+    <!-- Js Principal -->
     <script src="js/main.js"></script>
 </body>
 
