@@ -816,15 +816,11 @@ h3 {
 }
 @media (max-width: 576px) {
   .login-modal {
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
+    top: 12.5vh;
+    left: 10vw;
+    height: 75vh;
+    width: 80vw;
     max-height: initial;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
   }
   /*header*/
   [class*="user-"] i {
@@ -859,6 +855,20 @@ h3 {
   }
   .bottomf {
     text-align: center;
+  }
+}
+
+@media (max-height: 700px){
+  .login-modal {
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  max-height: initial;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   }
 }
 /*Fin media queries*/
