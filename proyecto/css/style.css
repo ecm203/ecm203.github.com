@@ -820,7 +820,6 @@ h3 {
     left: 10vw;
     height: 75vh;
     width: 80vw;
-    max-height: initial;
   }
   /*header*/
   [class*="user-"] i {
