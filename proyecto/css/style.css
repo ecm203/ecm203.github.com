@@ -497,7 +497,7 @@ h3 {
 }
 [class^="user-"] i {
   font-size: 1.75em;
-  margin-bottom: 2px;
+  margin-bottom: 5px;
 }
 .user-orders i {
   font-size: 2.25em;
@@ -810,12 +810,6 @@ h3 {
   .ft-tittle i {
     transition: transform 0.3s ease-in-out;
   }
-  .arrow-close {
-    transform: initial;
-  }
-  .arrow-open {
-    transform: rotate(90deg);
-  }
   .ft-tittle {
     display: flex;
     align-items: center;
@@ -827,6 +821,12 @@ h3 {
   }
 
   /* Animation dropdown*/
+  .arrow-close {
+    transform: initial;
+  }
+  .arrow-open {
+    transform: rotate(90deg);
+  }
   .dropdown-menu {
     background-color: var(--second-color);
     border-radius: 5px;
@@ -968,9 +968,12 @@ h3 {
     width: 80vw;
   }
   /*header*/
-  [class*="user-"] i {
-    font-size: 1.5em;
+  [class*="user-"]{
+    margin-right: 16px;
   }
+.user-cart{
+  margin-right: 0;
+}
   [class*="user-"] span {
     font-size: 13px;
   }
@@ -1015,6 +1018,8 @@ h3 {
   }
 }
 @media (max-height: 700px) and (max-width: 400px) {
+
+  /*login modal*/
   .login-modal {
     top: 0;
     left: 0;
