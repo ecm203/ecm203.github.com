@@ -186,6 +186,7 @@
     </nav>
     <!-- Menu mobile end -->
 
+
     <!-- Header-->
     <div class="header">
         <div class="hd-top py-4 px-lg-5 px-4">
@@ -223,7 +224,7 @@
                 </div>
 
                 <div class="d-flex align-items-end">
-                    <div class="user-search d-lg-none d-flex">
+                    <div class="user-search d-lg-none d-flex" onclick="openSearch()">
                         <i class="icon-search"></i>
                         <span> Buscar </span>
                     </div>
@@ -250,6 +251,17 @@
                     </div>
                 </div>
             </div>
+            <!-- Search mobile -->
+            <div class="search-mobile py-4 px-lg-5 px-4 disabled-modal">
+                <div class="search-menu">
+                    <a href="#" onclick="closeSearch()"><i class="icon-close"></i></a>
+                    <input type="text" placeholder="¿Que estás buscando?">
+                    <button>
+                        <i class="icon-search"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Search mobile end -->
         </div>
         <div class="hd-bottom px-5 py-2 d-lg-flex align-items-center d-none">
             <div class="menu">

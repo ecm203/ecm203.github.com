@@ -433,6 +433,7 @@ h3 {
   background-color: var(--first-color);
   display: flex;
   align-items: center;
+  position: relative;
 }
 .hdt-left {
   flex-grow: 1;
@@ -460,6 +461,7 @@ h3 {
   font-size: 18px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .search-menu input {
@@ -470,7 +472,19 @@ h3 {
   color: var(--second-color);
   font-size: 20px;
 }
-
+/*Search menu mobile*/
+.search-mobile{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.search-menu i.icon-close{
+  margin-right: 15px;
+}
+/*Fin search menu mobile*/
 .welcome-user {
   display: flex;
   align-items: center;
@@ -497,6 +511,7 @@ h3 {
   align-items: center;
   color: var(--fifth-color);
   font-size: 15px;
+  cursor: pointer;
 }
 [class^="user-"] i {
   font-size: 1.75em;

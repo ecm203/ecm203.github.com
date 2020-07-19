@@ -216,3 +216,26 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+
+/*Search mobile*/
+function openSearch(){
+  const div = document.querySelector(".search-mobile");
+  div.classList.remove("disabled-modal");
+  div.classList.add("active-modal","animate__animated","animate__fadeInLeftBig","animate__faster");
+}
+
+function closeSearch(){
+  const div = document.querySelector(".search-mobile");
+
+  animateCSS('.search-mobile','fadeOutRightBig').then((message) => {
+    // Do something after the animation
+    div.classList.remove(
+      "active-modal",
+      "animate__animated",
+      "animate__fadeInLeftBig",
+      "animate__faster"
+    );
+    div.classList.add("disabled-modal");
+  });
+}
