@@ -322,7 +322,7 @@ h3 {
   position: fixed;
   right: 0;
   width: 25vw;
-  height: 100vh;
+  height: 100%;
   background-color: var(--fifth-color);
   z-index: 1000;
   padding: 2rem 1.5rem;
