@@ -912,10 +912,9 @@ h3 {
     animation: hideAnimation .4s ease-in;
     transition: max-height .4s ease;
   }
-  .about-fotter .dropdown-menu,
-  .services-fotter .dropdown-menu{
-    padding-bottom: 0;
-  }
+ .dropdown-menu ul li:last-child{
+   margin-bottom: 0;
+ }
   @keyframes showAnimation {
     0%{
       transform: scaleY(0);
