@@ -871,7 +871,7 @@ h3 {
 
   /* Animation dropdown*/
   .arrow-close {
-    transform: initial;
+    transform: rotate(90deg);
   }
   .arrow-open {
     transform: rotate(270deg);
@@ -892,7 +892,7 @@ h3 {
     max-height: 9999px;
     transform: scaleY(1);
     animation: showAnimation 0.5s ease-in-out;
-    transition: max-height 0.5s ease-in-out;
+    transition: max-height 1s ease;
     margin-top: 30px;
     padding: 1.5rem;
   }
@@ -905,27 +905,6 @@ h3 {
   }
 
   @keyframes showAnimation {
-    /* 0% {
-      transform: scaleY(0);
-    }
-    40% {
-      transform: scaleY(1.04);
-    }
-    60% {
-      transform: scaleY(0.98);
-    }
-    80% {
-      transform: scaleY(1.04);
-    }
-    100% {
-      transform: scaleY(0.98);
-    }
-    80% {
-      transform: scaleY(1.02);
-    }
-    40% {
-      transform: scaleY(1);
-    } */
     0%{
       transform: scaleY(0);
     }
@@ -945,11 +924,6 @@ h3 {
       margin-top: 30px;
       padding: 1.5rem;
     }
-    /* 80% {
-      transform: scaleY(0.95);
-      margin-top: 30px;
-      padding: 1.5rem;
-    } */
     100% {
       transform: scaleY(0);
       margin-top: 0px;
