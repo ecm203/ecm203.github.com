@@ -1,13 +1,4 @@
 
-/*Menu mobile*/
-// (function(){
-//   new Mmenu(document.querySelector("#menu-mobile"));
-//  })();
-document.addEventListener(
-  "DOMContentLoaded", () => {
-      new Mmenu( "#menu-mobile" );
-  }
-);
 
 // Dropdown Menu
 
@@ -221,4 +212,9 @@ function menuPrincipal() {
     validaModal();
   }
 }
-
+/* Menu mobile*/
+document.addEventListener(
+  "DOMContentLoaded", () => {
+      new Mmenu("#menuMobile");
+  }
+);

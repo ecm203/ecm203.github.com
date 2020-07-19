@@ -530,6 +530,9 @@ h3 {
   font-size: 1.2em;
 }
 /*Menu mobile*/
+.menu-mobile{
+  font-family: var(--secundary-font);
+}
 .mburger {
   --mb-button-size: 40px;
   --mb-bar-height: 2px;
@@ -540,9 +543,9 @@ h3 {
 .mm-menu {
   --mm-color-background: var(--second-color);
   --mm-color-background-emphasis : var(--third-color);
-  --mm-color-background-highlight: var(--fifth-color);
+  --mm-color-background-highlight: var(--third-color);
   --mm-color-border: var(--third-color);
-  -mm-color-button: #000;
+  --mm-color-button: var(--fifth-color);
   --mm-color-text: var(--fifth-color);
   --mm-color-text-dimmed: var(--fifth-color);
 }
