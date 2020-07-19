@@ -540,6 +540,8 @@
 .mm-wrapper_opening .mm-menu_offcanvas.mm-menu_opened ~ .mm-slideout {
     -webkit-transform: translate3d(60vw, 0, 0);
     transform: translate3d(60vw, 0, 0);
+    background-color: rgba(0, 0, 0, .5);
+    transition: all .5s;
 }
 @media all and (max-width: 300px) {
     .mm-wrapper_opening .mm-menu_offcanvas.mm-menu_opened ~ .mm-slideout {
@@ -554,7 +556,6 @@
     }
 }
 .mm-wrapper__blocker {
-    background: rgba(3, 2, 1, 0);
     overflow: hidden;
     display: none;
     position: fixed;

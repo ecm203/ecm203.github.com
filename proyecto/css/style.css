@@ -541,10 +541,10 @@ h3 {
   --mb-bar-spacing: 8px;
 }
 .mm-menu {
-  --mm-color-background: var(--second-color);
-  --mm-color-background-emphasis : var(--third-color);
-  --mm-color-background-highlight: var(--third-color);
-  --mm-color-border: var(--third-color);
+  --mm-color-background: var(--first-color);
+  --mm-color-background-emphasis : var(--second-color);
+  --mm-color-background-highlight: var(--second-color);
+  --mm-color-border: var(--second-color);
   --mm-color-button: var(--fifth-color);
   --mm-color-text: var(--fifth-color);
   --mm-color-text-dimmed: var(--fifth-color);
