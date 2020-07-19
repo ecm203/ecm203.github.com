@@ -874,7 +874,7 @@ h3 {
     transform: initial;
   }
   .arrow-open {
-    transform: rotate(90deg);
+    transform: rotate(270deg);
   }
   .dropdown-menu {
     background-color: var(--second-color);
@@ -892,7 +892,7 @@ h3 {
     max-height: 9999px;
     transform: scaleY(1);
     animation: showAnimation 0.5s ease-in-out;
-    transition: max-height 1s ease-in-out;
+    transition: max-height 0.5s ease-in-out;
     margin-top: 30px;
     padding: 1.5rem;
   }
@@ -900,12 +900,12 @@ h3 {
   .hide-drop {
     max-height: 0;
     transform: scaleY(0);
-    animation: hideAnimation 0.4s ease-in;
-    transition: max-height 0.6s ease-in;
+    animation: hideAnimation 0.5s ease-in;
+    transition: max-height 0.5s ease;
   }
 
   @keyframes showAnimation {
-    0% {
+    /* 0% {
       transform: scaleY(0);
     }
     40% {
@@ -925,6 +925,12 @@ h3 {
     }
     40% {
       transform: scaleY(1);
+    } */
+    0%{
+      transform: scaleY(0);
+    }
+    100%{
+      transform: scaleY(1);
     }
   }
 
@@ -935,15 +941,15 @@ h3 {
       padding: 1.5rem;
     }
     60% {
-      transform: scaleY(0.98);
+      transform: scaleY(0.6);
       margin-top: 30px;
       padding: 1.5rem;
     }
-    80% {
-      transform: scaleY(1.02);
+    /* 80% {
+      transform: scaleY(0.95);
       margin-top: 30px;
       padding: 1.5rem;
-    }
+    } */
     100% {
       transform: scaleY(0);
       margin-top: 0px;
