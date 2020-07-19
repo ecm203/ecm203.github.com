@@ -20,6 +20,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
     <!-- Menu burguer animacion css -->
     <link rel="stylesheet" href="css/mburger.css">
+    <!-- Menu Mobile -->
+    <link rel="stylesheet" href="css/mmenu.css">
     <!-- Estilos principales -->
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -41,7 +43,6 @@
 
     <!-- Background overlay -->
     <div class="background-overlay disabled-background" onclick="validaModal()">
-
     </div>
     <!-- End background overlay -->
 
@@ -88,7 +89,6 @@
                 facebook</button>
             <span class="register-info">¿No tienes cuenta? <a class="register-link" href="#">Registrate</a></span>
         </div>
-    </div>
     </div>
     <!-- End Login modal -->
 
@@ -138,16 +138,15 @@
                         <span class="price-pro">1700</span>
                     </div>
                 </li>
-                
-            </ul>
 
-            <!-- <div class="empty-cr">
+            </ul>
+            <div class="empty-cr d-none">
                 <p>
                     Tu carrito de compras está vacio. <br>
                     Agrega productos ahora
                 </p>
                 <a href="#" class="buy-cr">Seguir comprando</a>
-            </div> -->
+            </div>
         </div>
         <div class="fotter-cart">
             <a href="#" class="btn-primary">Ver carrito</a>
@@ -155,8 +154,42 @@
     </div>
     <!-- End cart Modal -->
 
+    <!-- Menu mobile -->
+    <nav id="menu-mobile">
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li>
+                <span>About us</span>
+                <ul>
+                    <li><a href="#about/history">History</a></li>
+                    <li>
+                        <span>The team</span>
+                        <ul>
+                            <li>
+                                <a href="#about/team/management">Management</a>
+                            </li>
+                            <li>
+                                <a href="#about/team/sales">Sales</a>
+                            </li>
+                            <li>
+                                <a href="#about/team/development">Development</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#about/address">Our address</a></li>
+                </ul>
+            </li>
+            <li><a href="#contact">Contact</a></li>
+
+            <li class="Divider">Other demos</li>
+            <li><a href="advanced.html">Advanced demo</a></li>
+            <li><a href="onepage.html">One page demo</a></li>
+        </ul>
+    </nav>
+    <!-- Menu mobile end -->
+
     <!-- Header-->
-    <header class="header">
+    <div class="header">
         <div class="hd-top py-4 px-lg-5 px-4">
             <div class="hdt-left d-flex justify-content-xl-center justify-content-start">
                 <a href="#" class="logo-link d-md-block d-none">
@@ -165,9 +198,13 @@
                 <a href="#" class="logo-link d-md-none d-block">
                     C
                 </a>
-                <div class="user-search ml-4 d-lg-none d-flex">
-                    <i class="icon-menu"></i>
-                    <span> Menú </span>
+                <div class="user-mmenu animate-menu d-lg-none d-flex">
+                    <a class="mburger mburger--spin" href="#menu-mobile">
+                        <b></b>
+                        <b></b>
+                        <b></b>
+                    </a>
+                    <span class="mmenu-text">Menú</span>
                 </div>
             </div>
             <div class="hdt-center d-lg-block d-none ">
@@ -216,10 +253,17 @@
                 </div>
             </div>
         </div>
-        <div class="hd-bottom px-5 py-3 d-lg-flex align-items-center d-none">
+        <div class="hd-bottom px-5 py-2 d-lg-flex align-items-center d-none">
             <div class="menu">
-                <i class="icon-menu"></i>
-                <span class="menu-text">MENÚ</span>
+                <a class="mburger mburger--spin" onclick="menuPrincipal()">
+                    <b></b>
+                    <b></b>
+                    <b></b>
+                    <span class="menu-text">MENÚ</span>
+                </a>
+                <div class="menu-principal disabled-modal">
+
+                </div>
             </div>
             <nav class="menu-nav">
                 <ul class="ul-nav">
@@ -246,14 +290,14 @@
                 </ul>
             </nav>
         </div>
-    </header>
+    </div>
     <!-- End header-->
 
-    <div class="main">
+    <div class="main" style="height: 500px;">
     </div>
 
     <!-- Footer-->
-    <footer>
+    <div class="fotter">
         <div class="ft-top p-sm-5 p-4">
             <div class="ft-row pb-sm-5 pb-4">
                 <div class="contact-fotter dropdown">
@@ -452,12 +496,14 @@
         <div class="ft-bottom p-2">
             <p>COSEINCO S.A.C © Todo los derechos reservados 2020</p>
         </div>
-    </footer>
+    </div>
     <!-- End footer-->
-
-
+    
+    <!-- Menu Mobile -->
+    <script src="js/mmenu.js"></script>
     <!-- Js Principal -->
     <script src="js/main.js"></script>
+
 </body>
 
 </html>

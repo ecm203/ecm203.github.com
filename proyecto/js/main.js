@@ -1,3 +1,14 @@
+
+/*Menu mobile*/
+// (function(){
+//   new Mmenu(document.querySelector("#menu-mobile"));
+//  })();
+document.addEventListener(
+  "DOMContentLoaded", () => {
+      new Mmenu( "#menu-mobile" );
+  }
+);
+
 // Dropdown Menu
 
 if (screen.width <= 992) {
@@ -88,8 +99,6 @@ function closeBackground() {
 function openModal(element, animation, prefix = "animate__") {
   const modal = document.querySelector(element);
 
-  openBackground();
-
   modal.classList.remove(
     "disabled-modal",
     `${prefix}animated`,
@@ -106,6 +115,7 @@ function openModal(element, animation, prefix = "animate__") {
 
 /* Open login*/
 function openLogin() {
+  openBackground();
   openModal(".login-modal", "backInDown");
 }
 
@@ -130,13 +140,20 @@ function closeModal(element, animation, prefix = "animate__") {
 function validaModal() {
   const modal1 = document.querySelector(".login-modal");
   const modal2 = document.querySelector(".cart-modal");
+  const modal3 = document.querySelector(".menu-principal");
+
   let prueba1 = modal1.classList.contains("active-modal");
   let prueba2 = modal2.classList.contains("active-modal");
+  let prueba3 = modal3.classList.contains("active-modal");
+
   if (prueba1 == true) {
     closeModal(".login-modal", "backOutUp");
   }
   if (prueba2 == true) {
     closeModal(".cart-modal", "slideOutRight");
+  }
+  if (prueba3 == true) {
+    closeModal(".menu-principal", "fadeOutUp");
   }
 }
 
@@ -179,5 +196,29 @@ no.onclick = function (event) {
 
 /*Open Cart*/
 function openCart() {
+  openBackground();
   openModal(".cart-modal", "slideInRight");
 }
+
+/*Animation menu*/
+
+
+/*Open menu*/
+function menuPrincipal() {
+
+  const menu = document.querySelector(".menu-principal");
+  const logo = document.querySelector(".menu");
+
+    const bool = menu.classList.contains("active-modal");
+
+
+  if (bool == false) {
+    logo.classList.add("mm-wrapper_opened");
+    openModal(".menu-principal", "fadeInDown");
+  }
+  if (bool == true){
+    logo.classList.remove("mm-wrapper_opened");
+    validaModal();
+  }
+}
+

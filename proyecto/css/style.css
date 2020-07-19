@@ -108,6 +108,7 @@ h3 {
   z-index: 1000;
   background-color: rgba(0, 0, 0, 0.75);
 }
+
 .active-background {
   display: block;
 }
@@ -435,6 +436,7 @@ h3 {
 }
 .hdt-left {
   flex-grow: 1;
+  align-items: center;
 }
 .hdt-center {
   flex-grow: 2;
@@ -444,6 +446,7 @@ h3 {
 }
 .hd-bottom {
   background-color: var(--second-color);
+  position: relative;
 }
 .logo-link {
   color: var(--fifth-color);
@@ -523,17 +526,50 @@ h3 {
 }
 .menu {
   color: var(--fifth-color);
-  flex-grow: 1;
   cursor: pointer;
   font-size: 1.2em;
 }
+/*Menu mobile*/
+.mburger {
+  --mb-button-size: 40px;
+  --mb-bar-height: 2px;
+}
+.mburger b{
+  --mb-bar-spacing: 8px;
+}
+.mm-menu {
+  --mm-color-background: var(--second-color);
+  --mm-color-background-emphasis : var(--third-color);
+  --mm-color-background-highlight: var(--fifth-color);
+  --mm-color-border: var(--third-color);
+  -mm-color-button: #000;
+  --mm-color-text: var(--fifth-color);
+  --mm-color-text-dimmed: var(--fifth-color);
+}
 .menu-text {
-  margin-left: 5px;
+  /* margin-left: 5px; */
   font-weight: 700;
+}
+/*Menu principal*/
+.menu-principal{
+  position: absolute;
+  top: 100%;
+  width: 20vw;
+  height: 70vh;
+  background-color: var(--third-color);
+  z-index: 1000;
+}
+
+/*Menu mobile*/
+.user-mmenu{
+  margin-left: 20px;
+}
+.mmenu-text{
+  font-size: 15px;
 }
 .menu-nav {
   color: var(--fifth-color);
-  flex-grow: 5;
+  margin-left: 100px;
   font-size: 1.1em;
 }
 .ul-nav {
@@ -1018,7 +1054,6 @@ h3 {
   }
 }
 @media (max-height: 700px) and (max-width: 400px) {
-
   /*login modal*/
   .login-modal {
     top: 0;
