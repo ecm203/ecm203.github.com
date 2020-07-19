@@ -868,8 +868,17 @@ h3 {
   .tittle-f {
     font-size: 20px;
   }
-
+  .item-f a span::before{
+    font-family: 'icomoon' !important;
+    content: "\e927";
+    font-size: 10px;
+    margin-right: 10px;
+    color: var(--third-color);
+  }
   /* Animation dropdown*/
+  .ft-tittle i{
+    transition: all .5s ease;
+  }
   .arrow-close {
     transform: rotate(90deg);
   }
@@ -900,10 +909,13 @@ h3 {
   .hide-drop {
     max-height: 0;
     transform: scaleY(0);
-    animation: hideAnimation .5s ease-in;
-    transition: max-height .5s ease;
+    animation: hideAnimation .4s ease-in;
+    transition: max-height .4s ease;
   }
-
+  .about-fotter .dropdown-menu,
+  .services-fotter .dropdown-menu{
+    padding-bottom: 0;
+  }
   @keyframes showAnimation {
     0%{
       transform: scaleY(0);

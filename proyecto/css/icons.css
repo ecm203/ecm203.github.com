@@ -13,7 +13,7 @@
   [class^="icon-"], [class*=" icon-"] {
     /* use !important to prevent issues with browser extensions that change fonts */
     font-family: 'icomoon' !important;
-    speak: never;
+    /* speak: never; */
     font-style: normal;
     font-weight: normal;
     font-variant: normal;
@@ -24,6 +24,10 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+
+.icon-rhombus:before {
+  content: "\e927";
+}
   
   .icon-american-express:before {
     content: "\e900";
@@ -141,4 +145,8 @@
   }
   .icon-youtube:before {
     content: "\e926";
+  }
+
+  .icon-2x{
+    font-size: 100px;
   }
