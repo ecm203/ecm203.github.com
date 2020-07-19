@@ -92,8 +92,11 @@ h3 {
   color: var(--fifth-color);
   border-radius: 7px;
   display: flex;
-  transform: rotate(-90deg);
   z-index: 100;
+  cursor: pointer;
+}
+.scroll-to-top i.icon-next{
+  transform: rotate(-90deg);
 }
 
 /* Fin scroll to top*/

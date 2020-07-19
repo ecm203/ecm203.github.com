@@ -211,24 +211,28 @@ function menuPrincipal() {
 
 document.addEventListener("DOMContentLoaded", () => {
   new Mmenu("#menuMobile", {
-    navbar:{
-     title: "COSEINCO"
-    }
+    navbar: {
+      title: "COSEINCO",
+    },
   });
 });
 
-
 /*Search mobile*/
-function openSearch(){
+function openSearch() {
   const div = document.querySelector(".search-mobile");
   div.classList.remove("disabled-modal");
-  div.classList.add("active-modal","animate__animated","animate__fadeInLeftBig","animate__faster");
+  div.classList.add(
+    "active-modal",
+    "animate__animated",
+    "animate__fadeInLeftBig",
+    "animate__faster"
+  );
 }
 
-function closeSearch(){
+function closeSearch() {
   const div = document.querySelector(".search-mobile");
 
-  animateCSS('.search-mobile','fadeOutRightBig').then((message) => {
+  animateCSS(".search-mobile", "fadeOutRightBig").then((message) => {
     // Do something after the animation
     div.classList.remove(
       "active-modal",
@@ -238,4 +242,41 @@ function closeSearch(){
     );
     div.classList.add("disabled-modal");
   });
+}
+
+/*Scroll to top*/
+
+var toTop = document.querySelector(".scroll-to-top");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    toTop.classList.remove(
+      "d-none",
+      "animate__animated",
+      "animate__fadeOutDown"
+    );
+    toTop.classList.add("d-flex", "animate__animated", "animate__fadeInUp");
+  } else {
+    toTop.classList.remove("d-flex", "animate__animated", "animate__fadeInUp");
+    animateCSS(".scroll-to-top", "fadeOutDown").then((message) => {
+      // Do something after the animation
+      toTop.classList.add("d-none");
+    });
+  }
+}
+toTop.addEventListener("click", function () {
+  scrollToTop(400);
+});
+function scrollToTop(scrollDuration) {
+  var scrollStep = -window.scrollY / (scrollDuration / 15),
+    scrollInterval = setInterval(function () {
+      if (window.scrollY != 0) {
+        window.scrollBy(0, scrollStep);
+      } else clearInterval(scrollInterval);
+    }, 15);
 }
