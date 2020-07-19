@@ -891,7 +891,7 @@ h3 {
     display: block;
     max-height: 9999px;
     transform: scaleY(1);
-    animation: showAnimation 0.5s ease-in-out;
+    animation: showAnimation .5s ease-in-out;
     transition: max-height 1s ease;
     margin-top: 30px;
     padding: 1.5rem;
@@ -900,8 +900,8 @@ h3 {
   .hide-drop {
     max-height: 0;
     transform: scaleY(0);
-    animation: hideAnimation 0.5s ease-in;
-    transition: max-height 0.5s ease;
+    animation: hideAnimation .5s ease-in;
+    transition: max-height .5s ease;
   }
 
   @keyframes showAnimation {
