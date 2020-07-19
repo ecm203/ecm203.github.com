@@ -25,9 +25,7 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
-.icon-rhombus:before {
-  content: "\e927";
-}
+
   
   .icon-american-express:before {
     content: "\e900";
@@ -104,6 +102,9 @@
   .icon-real-estate:before {
     content: "\e918";
   }
+.icon-rhombus:before {
+  content: "\e927";
+}
   .icon-search:before {
     content: "\e919";
   }

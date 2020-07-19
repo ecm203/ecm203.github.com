@@ -59,6 +59,7 @@ h3 {
   align-items: center;
   justify-content: center;
   background: var(--first-color);
+  z-index: 1000;
 }
 .loader {
   border: 5px solid var(--fifth-color);
@@ -579,6 +580,7 @@ h3 {
 }
 .menu-text {
   /* margin-left: 5px; */
+  font-size: 18px;
   font-weight: 700;
 }
 /*Menu principal*/
@@ -601,7 +603,7 @@ h3 {
 .menu-nav {
   color: var(--fifth-color);
   margin-left: 100px;
-  font-size: 1.1em;
+  font-size: 1em;
 }
 .ul-nav {
   display: flex;

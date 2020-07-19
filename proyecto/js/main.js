@@ -280,3 +280,13 @@ function scrollToTop(scrollDuration) {
       } else clearInterval(scrollInterval);
     }, 15);
 }
+
+/*Loading page*/
+window.onload = function(){
+  const panel = document.querySelector(".panel");
+
+  animateCSS(".panel", "fadeOutUp").then((message) => {
+    // Do something after the animation
+    panel.classList.add("d-none");
+  });
+}
