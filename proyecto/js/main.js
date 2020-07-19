@@ -1,5 +1,3 @@
-
-
 // Dropdown Menu
 
 if (screen.width <= 992) {
@@ -193,28 +191,28 @@ function openCart() {
 
 /*Animation menu*/
 
-
 /*Open menu*/
 function menuPrincipal() {
-
   const menu = document.querySelector(".menu-principal");
   const logo = document.querySelector(".menu");
 
-    const bool = menu.classList.contains("active-modal");
-
+  const bool = menu.classList.contains("active-modal");
 
   if (bool == false) {
     logo.classList.add("mm-wrapper_opened");
     openModal(".menu-principal", "fadeInDown");
   }
-  if (bool == true){
+  if (bool == true) {
     logo.classList.remove("mm-wrapper_opened");
     validaModal();
   }
 }
 /* Menu mobile*/
-document.addEventListener(
-  "DOMContentLoaded", () => {
-      new Mmenu("#menuMobile");
-  }
-);
+
+document.addEventListener("DOMContentLoaded", () => {
+  new Mmenu("#menuMobile", {
+    navbar:{
+     title: "COSEINCO"
+    }
+  });
+});
