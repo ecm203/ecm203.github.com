@@ -284,9 +284,10 @@ function scrollToTop(scrollDuration) {
 /*Loading page*/
 window.onload = function(){
   const panel = document.querySelector(".panel");
-
+  const body = document.querySelector("body");
   animateCSS(".panel", "fadeOutUp").then((message) => {
     // Do something after the animation
     panel.classList.add("d-none");
+    body.classList.remove("over-load");
   });
 }
