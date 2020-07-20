@@ -139,18 +139,18 @@
     margin-top: calc(-1 * var(--swiper-navigation-size) / 2);
     z-index: 10;
     cursor: pointer;
-    /* display: flex; */
+    display: flex;
     align-items: center;
     justify-content: center;
     background-color: rgba(0, 0, 0, 0.5);
     color: #fff;
     padding: 25px 30px;
-    display: none;
-    transition: 0.3s;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
 }
 .swiper-container:hover .swiper-button-next,
 .swiper-container:hover .swiper-button-prev{
-    display: flex;
+    opacity: 1;
 }
 .swiper-button-next.swiper-button-disabled,
 .swiper-button-prev.swiper-button-disabled {

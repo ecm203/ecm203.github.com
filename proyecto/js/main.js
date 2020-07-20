@@ -282,7 +282,7 @@ function scrollToTop(scrollDuration) {
 }
 
 /*Loading page*/
-window.onload = function(){
+window.onload = function () {
   const panel = document.querySelector(".panel");
   const body = document.querySelector("body");
   animateCSS(".panel", "fadeOutUp").then((message) => {
@@ -290,23 +290,17 @@ window.onload = function(){
     panel.classList.add("d-none");
     body.classList.remove("over-load");
   });
-}
-
+};
 
 /*Main container*/
-var mySwiper = new Swiper('.swiper-container', {
-  // Optional parameters
+var swiper = new Swiper(".swiper-container", {
   loop: true,
-
-  // If we need pagination
   pagination: {
-    el: '.swiper-pagination',
-    clickable: true
+    el: ".swiper-pagination",
+    clickable: true,
   },
-
-  // Navigation arrows
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  }
-})
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
