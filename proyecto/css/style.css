@@ -887,7 +887,7 @@ h3 {
   }
   .item-f a span::before {
     font-family: "icomoon" !important;
-    content: "\e927";
+    content: "\e91b";
     font-size: 10px;
     margin-right: 10px;
     color: var(--third-color);
