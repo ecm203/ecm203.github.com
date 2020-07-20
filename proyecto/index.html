@@ -51,7 +51,7 @@
     <!-- Login modal -->
     <div class="login-modal disabled-modal">
         <div class="log-close" onclick="validaModal()">
-            <i class="icon-close"></i>
+            <i class="icon-close-dark"></i>
         </div>
         <div class="log-tittle">
             <span class="tittle-l">Iniciar sesión</span>
@@ -154,31 +154,10 @@
     <!-- Menu mobile -->
     <nav id="menuMobile" class="menu-mobile">
         <ul>
-            <li><a href="#">HOME</a></li>
+            <li><a href="#"><i class="icon-home icon-mobile"></i> HOME</a></li>
             <li><a href="#"><i class="icon-user icon-mobile"></i> MI CUENTA</a></li>
             <li><a href="#"><i class="icon-truck icon-mobile"></i>MIS PEDIDOS</a></li>
-            <li><a href="#">¿NECESITAS AYUDA?</a></li>
-            <!-- <li>
-                <span>About us</span>
-                <ul>
-                    <li><a href="#">History</a></li>
-                    <li>
-                        <span>The team</span>
-                        <ul>
-                            <li>
-                                <a href="#">Management</a>
-                            </li>
-                            <li>
-                                <a href="#">Sales</a>
-                            </li>
-                            <li>
-                                <a href="#">Development</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Our address</a></li>
-                </ul>
-            </li> -->
+            <li><a href="#"><i class="icon-help icon-mobile"></i>  ¿NECESITAS AYUDA?</a></li>
         </ul>
     </nav>
     <!-- Menu mobile end -->
@@ -222,7 +201,7 @@
 
                 <div class="d-flex align-items-end">
                     <div class="user-search d-lg-none d-flex" onclick="openSearch()">
-                        <i class="icon-search"></i>
+                        <i class="icon-search-mobile"></i>
                         <span> Buscar </span>
                     </div>
                     <div class="user-menu  ml-sm-4 ml-0 d-lg-none d-flex" onclick="openLogin()">
@@ -527,19 +506,6 @@
     <script src="js/mmenu.js"></script>
     <!-- Js Principal -->
     <script src="js/main.js"></script>
-    <script>
-        var swiper = new Swiper(".swiper-container", {
-  loop: true,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-});
-    </script>
+    
 </body>
-
 </html>
