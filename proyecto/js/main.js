@@ -294,6 +294,7 @@ window.onload = function () {
 
 /*Main container*/
 var swiper = new Swiper(".swiper-container", {
+  direction: 'horizontal',
   loop: true,
   pagination: {
     el: ".swiper-pagination",
