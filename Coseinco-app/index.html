@@ -28,65 +28,68 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="over-load">
+<body class="over_load">
     <!-- Loading page -->
-    <div class="panel">
+    <!-- <div class="panel">
         <div class="border">
             <div class="loader"></div>
         </div>
-    </div>
+    </div> -->
     <!-- End loading page -->
 
     <!-- Scroll to top -->
-    <div class="scroll-to-top d-none">
+    <div class="scroll_to_top d-none">
         <i class="icon-next"></i>
     </div>
     <!-- End Scroll to top -->
 
     <!-- Background overlay -->
-    <div class="background-overlay disabled-background" onclick="validaModal()">
-    </div>
+    <!-- <div class="background-overlay disabled-background" onclick="validaModal()">
+    </div> -->
     <!-- End background overlay -->
 
     <!-- Login modal -->
-    <div class="login-modal disabled-modal">
-        <div class="login-header">
-            <span class="tittle-l">Iniciar sesión</span>
-            <button class="log-close" onclick="validaModal() ">
-                <i class="icon-close-dark"></i>
-            </button>
-        </div>
-
-        <div class="login-form">
-            <div class="input-div">
-                <i class="icon-mail"></i>
-                <input type="text" required onchange="validarEmail()" spellcheck="false" autocomplete="off"
-                    id="txtEmail">
-                <label class="lblLabel" tittle="Ingrese su email" for="txtEmail"></label>
-                <span class="input-feedback">Ingrese un dni válido</span>
+    <div class="modal_overlay">
+        <div class="modal_content">
+            <div class="modal_header">
+                <span class="tittle_modal">Iniciar sesión</span>
+                <button class="modal_close">
+                    <i class="icon-close"></i>
+                </button>
             </div>
-            <div class="input-div">
-                <i class="icon-smart-key"></i>
-                <input type="password" required autocomplete="off" id="txtPassword">
-                <label class="lblContraseña" tittle="Ingrese su contraseña" for="txtPassword"></label>
-                <a class="yes">
-                    <i class="icon-eye"></i>
-                </a>
-                <a class="no d-none">
-                    <i class="icon-youtube"></i>
-                </a>
-                <span class="input-feedback">Campo requerido</span>
-                <span class="validate-login">Email o contraseña incorrecto</span>
+    
+            <div class="login_form">
+                <div class="input_div">
+                    <input type="text" required  spellcheck="false" autocomplete="off"
+                        id="txtEmail">
+                    <label class="lblLabel">Ingrese su email</label>
+                    <button class="clear_input d-none">
+                        <i class="icon-close"></i>
+                    </button>
+                    <span class="input_feedback">Email incorrecto ejemplo: nombre@ejemplo.com</span>
+                </div>
+                <div class="input_div">
+                    <input type="password" required autocomplete="off" id="txtPassword">
+                    <label class="lblContraseña"> Ingrese su contraseña </label>
+                    <button class="yes">
+                        <i class="icon-eye"></i>
+                    </button>
+                    <button class="no d-none">
+                        <i class="icon-youtube"></i>
+                    </button>
+                    <span class="input_feedback">Campo requerido</span>
+                    <span class="validate_login">Email o contraseña incorrecto</span>
+                </div>
+                <div class="login_option">
+                    <a class="forget_link" href="#"> ¿Olvidaste tu contraseña? </a>
+                    <button class="btn_login" id="btnLogin">Ingresar</button>
+                </div>
+                <div class="other_way">ó</div>
+                <button class="btn_login_facebook" id="btnLoginFacebook"><i class="icon-facebook"></i> Ingresa con
+                    facebook</button>
+                <span class="register_info">¿No tienes cuenta? <a class="register_link"
+                        href="#">Registrate</a></span>
             </div>
-            <div class="div-log">
-                <a class="forget-link" href="#"> ¿Olvidaste tu contraseña? </a>
-                <button class="btn-login" id="btnLogin">Ingresar</button>
-            </div>
-            <div class="other-way">ó</div>
-            <button class="btn-login-facebook" id="btnLoginFacebook"><i class="icon-facebook"></i> Ingresa con
-                facebook</button>
-            <span class="register-info">¿No tienes cuenta? <a class="register-link"
-                    href="#">Registrate</a></span>
         </div>
     </div>
     <!-- End Login modal -->
@@ -507,7 +510,7 @@
     <!-- Mobile menu -->
     <script src="js/mmenu.js"></script>
     <!-- Js Principal -->
-    <script src="js/main.js"></script>
+    <!-- <script src="js/main.js"></script> -->
     
 </body>
 </html>
