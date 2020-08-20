@@ -672,7 +672,7 @@ input:valid ~ label {
 
 .ft-top {
   background-color: var(--first-color);
-  color: var(--fifth-color);
+  color: var(--background-color);
   padding: 3rem;
 }
 .ft-row {
@@ -698,14 +698,20 @@ input:valid ~ label {
 }
 .tittle-f {
   font-family: var(--primary-font);
+  color: var(--fourth-color);
   font-size: 18px;
 }
+
+.contact-ft{
+  margin-bottom: 25px;
+}
+
 [class*="-contact"] {
   display: flex;
   align-items: flex-start;
   font-family: var(--secundary-font);
-  margin-bottom: 25px;
 }
+
 [class*="-contact"] i {
   font-size: 20px;
 }
@@ -733,6 +739,7 @@ input:valid ~ label {
 
 .subs-text {
   display: block;
+  font-size: 14px;
   margin-bottom: 20px;
 }
 .txt-subs {
@@ -888,7 +895,7 @@ input:valid ~ label {
   }
   .hd-row-bottom {
     margin: 0 auto;
-    justify-content: center;
+    /* justify-content: center; */
     max-width: 1280px;
   }
 }
@@ -914,7 +921,7 @@ input:valid ~ label {
     border-bottom: 2px solid var(--second-color);
   }
   .ft-top {
-    padding: 1.5rem 0;
+    padding: 0 0 1.5rem 0;
   }
   .ft-row {
     padding: 0 0 1.5rem 0;
@@ -934,7 +941,7 @@ input:valid ~ label {
     transition: transform 0.3s ease-in-out;
   }
   .tittle-f {
-    font-size: 20px;
+    font-size: 18px;
   }
   .item-f a span::before {
     font-family: "icomoon" !important;
@@ -950,7 +957,7 @@ input:valid ~ label {
   .arrow-close {
     transform: rotate(90deg);
   }
-  .dropdown.active .icon-next{
+  .dropdown.active .icon-next {
     transform: rotate(270deg);
   }
   .dropdown-menu {
@@ -960,16 +967,16 @@ input:valid ~ label {
     overflow: hidden;
     transition: max-height 0.2s ease-out;
   }
-  .dropdown-menu ul{
+  .dropdown-menu ul {
     padding: 1.5rem;
   }
-  .dropdown-menu ul li:last-child{
+  .dropdown-menu ul li:last-child {
     margin-bottom: 0;
   }
-  
-.subs-form{
-  padding: 1.5rem;
-}
+
+  .subs-form {
+    padding: 1.5rem;
+  }
   .btn-sub {
     display: block;
     margin-left: auto;
@@ -1032,10 +1039,7 @@ input:valid ~ label {
   .ft-tittle i {
     margin-left: 15px;
   }
-  .tittle-f {
-    font-size: 18px;
-  }
-
+  
   [class*="-icon"] h3 {
     text-align: center;
   }
