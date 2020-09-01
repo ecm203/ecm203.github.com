@@ -921,7 +921,7 @@ input:valid ~ label {
     border-bottom: 2px solid var(--second-color);
   }
   .ft-top {
-    padding: 0 0 1.5rem 0;
+    padding: 1.5rem 0;
   }
   .ft-row {
     padding: 0 0 1.5rem 0;

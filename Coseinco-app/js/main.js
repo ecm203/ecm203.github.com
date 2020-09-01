@@ -1,36 +1,34 @@
 // Dropdown Menu
 
 if (screen.width <= 992) {
-  var dropdown = document.querySelectorAll(".dropdown");
-  var dropdownArray = Array.prototype.slice.call(dropdown, 0);
-  dropdownArray.forEach(function (el) {
-    var button = el.querySelector('a[data-toggle="dropdown"]'),
-      menu = el.querySelector(".dropdown-menu"),
-      arrow = button.querySelector("i.icon-next");
-
-    button.onclick = function (event) {
-      if (!menu.hasClass("show-drop")) {
-        menu.classList.add("show-drop");
-        menu.classList.remove("hide-drop");
-        arrow.classList.add("arrow-open");
-        arrow.classList.remove("arrow-close");
-        event.preventDefault();
-      } else {
-        menu.classList.remove("show-drop");
-        menu.classList.add("hide-drop");
-        arrow.classList.remove("arrow-open");
-        arrow.classList.add("arrow-close");
-        event.preventDefault();
-      }
-    };
-  });
-
-  Element.prototype.hasClass = function (className) {
-    return (
-      this.className &&
-      new RegExp("(^|\\s)" + className + "(\\s|$)").test(this.className)
-    );
-  };
+  // var dropdown = document.querySelectorAll(".dropdown");
+  // var dropdownArray = Array.prototype.slice.call(dropdown, 0);
+  // dropdownArray.forEach(function (el) {
+  //   var button = el.querySelector('a[data-toggle="dropdown"]'),
+  //     menu = el.querySelector(".dropdown-menu"),
+  //     arrow = button.querySelector("i.icon-next");
+  //   button.onclick = function (event) {
+  //     if (!menu.hasClass("show-drop")) {
+  //       menu.classList.add("show-drop");
+  //       menu.classList.remove("hide-drop");
+  //       arrow.classList.add("arrow-open");
+  //       arrow.classList.remove("arrow-close");
+  //       event.preventDefault();
+  //     } else {
+  //       menu.classList.remove("show-drop");
+  //       menu.classList.add("hide-drop");
+  //       arrow.classList.remove("arrow-open");
+  //       arrow.classList.add("arrow-close");
+  //       event.preventDefault();
+  //     }
+  //   };
+  // });
+  // Element.prototype.hasClass = function (className) {
+  //   return (
+  //     this.className &&
+  //     new RegExp("(^|\\s)" + className + "(\\s|$)").test(this.className)
+  //   );
+  // };
 }
 
 /*Animaciones con javascript*/
@@ -55,7 +53,7 @@ const animateCSS = (element, animation, prefix = "animate__") =>
 
 /*Open Background*/
 function openBackground() {
-  let background = document.querySelector(".background-overlay");
+  const background = document.querySelector(".background-overlay");
 
   background.classList.remove(
     "disabled-background",
@@ -246,7 +244,7 @@ function closeSearch() {
 
 /*Scroll to top*/
 
-var toTop = document.querySelector(".scroll-to-top");
+var toTop = document.querySelector(".scroll_to_top");
 
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function () {
@@ -263,7 +261,7 @@ function scrollFunction() {
     toTop.classList.add("d-flex", "animate__animated", "animate__fadeInUp");
   } else {
     toTop.classList.remove("d-flex", "animate__animated", "animate__fadeInUp");
-    animateCSS(".scroll-to-top", "fadeOutDown").then((message) => {
+    animateCSS(".scroll_to_top", "fadeOutDown").then((message) => {
       // Do something after the animation
       toTop.classList.add("d-none");
     });
@@ -294,8 +292,10 @@ window.onload = function () {
 
 /*Main container*/
 var swiper = new Swiper(".swiper-container", {
-  direction: 'horizontal',
-  loop: true,
+  direction: "horizontal",
+  autoplay: {
+    delay: 2500,
+  },
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
